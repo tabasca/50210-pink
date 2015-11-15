@@ -4,119 +4,117 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
-  <body class ="inner-page clearfix">
+  <body class ="inner-page">
 
     <header class="main-header">
       <div class="logo">
         <a href="index.html"><img src="" alt="PINK"></a>
       </div>
-      <nav class="main-nav">
-        <ul>
-          <li></li>
-        </ul>
-      </nav>
+      <div class="btn_open-menu">
+      </div>
     </header>
 
-    <main class="form-page">
+    <main class="main-section">
 
-      <section class="form-page-intro">
-        <h1 class="form-page-intro_title">
+      <section class="main-section_intro">
+        <h1 class="main-section_title">
           Конкурс на самое безбашенное путешествие с Пинк
         </h1>
-        <p class="form-page-intro_description">
+        <p class="main-section_description">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
         </p>
       </section>
 
       <form class="contest-form">
 
-        <fieldset class="contest-form_initials">
+        <fieldset class="contest-form_nobg">
           <label for="name">имя: *</label>
-          <input type="text" id="name" name="name" value="Введите ваше имя">
+          <input type="text" id="name" name="name" value="Введите ваше имя" required>
 
           <label for="surname">фамилия: *</label>
-          <input type="text" id="surname" name="surname" value="Укажите фамилию">
+          <input type="text" id="surname" name="surname" value="Укажите фамилию" required>
 
           <label for="second-name">отчество: </label>
           <input type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
         </fieldset>
 
-        <fieldset class="contest-form_app">
-          <legend class="contest-form_app_title">
+        <fieldset class="contest-form_bg">
+          <legend class="contest-form_bg_title">
             С каким приложением путешествовали?*
           </legend>
-          <input type="checkbox" id="ios" name="contest-form_app_choose" value="iOS" checked>
+          <input type="checkbox" id="ios" name="contest-form_bg_choose" value="iOS" checked required>
           <label for="ios">Pink для iOS</label>
 
-          <input type="checkbox" id="android" name="contest-form_app_choose" value="Android">
+          <input type="checkbox" id="android" name="contest-form_bg_choose" value="Android" required>
           <label for="android">Pink для Android</label>
 
-          <input type="checkbox" id="windows-phone" name="contest-form_app_choose" value="Windows Phone">
+          <input type="checkbox" id="windows-phone" name="contest-form_bg_choose" value="Windows Phone" required>
           <label for="windows-phone">Windows Phone</label>
         </fieldset>
 
-        <fieldset class="contest-form_dates">
-          <legend class="contest-form_dates_title">
+        <fieldset class="contest-form_nobg">
+          <legend class="contest-form_nobg_title">
             Когда Вы путешествовали?*
           </legend>
-          <input type="text" id="departure" name="contest-form_dates_choose" value="1 апреля 2015">
+          <input type="text" id="departure" name="contest-form_nobg_choose" value="1 апреля 2015" required>
           <label for="departure">Дата выезда</label>
 
-          <input type="text" id="duration" name="contest-form_dates_choose" value="10 дней">
+          <input type="text" id="duration" class="for-plus for-minus" name="contest-form_nobg_choose" value="10 дней" required>
           <label for="duration">Продолжительность</label>
 
-          <input type="text" id="arrival" name="contest-form_dates_choose" value="1 апреля 2015">
+          <input type="text" id="arrival" name="contest-form_nobg_choose" value="1 апреля 2015" required>
           <label for="arrival">Дата возвращения</label>
         </fieldset>
 
-        <fieldset class="contest-form_companions">
-          <legend class="contest-form_companions_title">
+        <fieldset class="contest-form_bg">
+          <legend class="contest-form_bg_title">
             Количество попутчиков *
           </legend>
 
-          <input type="text" name="contest-form_companions_choose" value="2 чел">
+          <input type="text" name="contest-form_bg_choose" value="2 чел" required>
 
-        </fieldset>
-
-        <fieldset class="contest-form_companions-description">
           <label for="name">Имя *</label>
-          <input type="text" id="name" name="contest-form_companions-description_choose" value="Введите ваше имя">
+          <input type="text" id="name" name="contest-form_bg-description_choose" value="Введите ваше имя" required>
 
           <label for="nickname">Прозвище</label>
-          <input type="text" id="nickname" name="contest-form_companions-description_choose" value="Ну как же без этого!">
+          <input type="text" id="nickname" name="contest-form_bg-description_choose" value="Ну как же без этого!">
         </fieldset>
 
-        <fieldset class="contest-form_activities">
-          <legend class="contest-form_activities_title">
+        <fieldset class="contest-form_nobg">
+          <legend class="contest-form_nobg_title">
             Ваши безбашенные достижения в путешествии
           </legend>
-          <input type="checkbox" id="shark" name="contest-form_activities_choose" value="selfie-shark" checked>
+          <input type="checkbox" id="shark" name="contest-form_nobg_choose" value="selfie-shark" checked>
           <label for="shark">Сделал селфи с акулой</label>
 
-          <input type="checkbox" id="sunburned" name="contest-form_activities_choose" value="sunburned" checked>
+          <input type="checkbox" id="sunburned" name="contest-form_nobg_choose" value="sunburned" checked>
           <label for="sunburned">Обгорел на пляже</label>
 
-          <input type="checkbox" id="chak_norris" name="contest-form_activities_choose" value="chak_norris">
+          <input type="checkbox" id="chak_norris" name="contest-form_nobg_choose" value="chak_norris">
           <label for="chak_norris">Видел Чака Норриса</label>
 
-          <input type="checkbox" id="souvenirs" name="contest-form_activities_choose" value="souvenirs">
+          <input type="checkbox" id="souvenirs" name="contest-form_nobg_choose" value="souvenirs">
           <label for="souvenirs">Накупил сувениров</label>
 
-          <input type="checkbox" id="tower" name="contest-form_activities_choose" value="tower" checked>
+          <input type="checkbox" id="tower" name="contest-form_nobg_choose" value="tower" checked>
           <label for="tower">Удержал башню</label>
 
-          <input type="checkbox" id="hotel" name="contest-form_activities_choose" value="hotel" checked>
+          <input type="checkbox" id="hotel" name="contest-form_nobg_choose" value="hotel" checked>
           <label for="hotel">Разгромил отель</label>
         </fieldset>
 
-        <fieldset class="contest-form_photos">
-          <legend class="contest-form_photos_title">
+        <fieldset class="contest-form_bg">
+          <legend class="contest-form_bg_title">
             Ваши фотографии из поездки *
           </legend>
 
-          <div class="btn">
-            <a href="#">Загрузить фото</a>
-          </div>
+          <!-- способ номер4 из http://habrahabr.ru/post/189570/ -->
+
+          <label for="photo">
+            <span class="button">Загрузить фото</span>
+            <mark>Файл не выбран</mark>
+            <input type="file" id="photo" name="contest-form_bg_photo" required>
+          </label>
 
           <img src="" alt="photo_1">
           <img src="" alt="photo_2">
@@ -131,8 +129,8 @@
 
         <input type="submit" value="ОТправить форму">
 
-        <div class="contest-form_comment">
-          <p>* - обяхательные поля</p>
+        <div class="contest-form_nobg">
+          <p>* - обязательные поля</p>
         </div>
 
       </form>
