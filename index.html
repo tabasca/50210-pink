@@ -4,150 +4,150 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
-  <body class="index-page">
+  <body class="page">
 
-    <header class="main-header">
-      <div class="logo">
-        <a href="index.html"><img src="" alt="PINK"></a>
+    <header class="page-header">
+      <div class="logo  header__logo">
+        <a class="page-header__logo-link" href="index.html"><img src="" alt="PINK"></a>
       </div>
 
-      <div class="main-header__btn-menu">
+      <div class="page-header__btn-menu">
       </div>
 
-      <nav class="main-nav clearfix">
-        <ul>
-          <li><a href="#">ИНФОРМАЦИЯ</a></li>
-          <li><a href="#">Блог</a></li>
-          <li><a href="#">отзывы</a></li>
-          <li><a href="form.html">конкурс</a></li>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#">ИНФОРМАЦИЯ</a></li>
+          <li class="main-nav__item"><a href="#">Блог</a></li>
+          <li class="main-nav__item"><a href="#">отзывы</a></li>
+          <li class="main-nav__item"><a href="form.html">конкурс</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="main-section">
 
-      <section class="intro">
-        <h1 class="title">
+      <section class="intro main-intro">
+        <h1 class="intro__title">
           Взгляните на жизнь иначе!
         </h1>
-        <p class="intro__btn">
-          <a href="#" class="btn-download">Скачать приложение</a>
+        <a class="btn  intro__btn" href="#">Скачать приложение</a>
+        <p class="intro__text">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
         </p>
-        <div class="intro__compatibility">
-          <p class="intro__compatibility-description">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-          </p>
-        </div>
       </section>
 
-      <div class="proposal">
-        <h2 class="title">
+      <div class="intro">
+        <h2 class="intro__title  intro__title--gray">
           Устали от серости мегаполиса?
         </h2>
-        <h2 class="title">
+        <h2 class="intro__title  intro__title--gray">
           Нам есть, что вам предложить!
         </h2>
       </div>
 
-      <div class="features clearfix">
+      <div class="features">
 
-        <section class="features-item">
-          <h3 class="features-item__title">
+        <section class="features__item">
+          <h3 class="features__title">
             Поднимает настроение
           </h3>
-          <p class="features-item__description">
+          <p class="features__description">
             Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
           </p>
         </section>
 
-        <section class="features-item">
-          <h3 class="features-item__title">
+        <section class="features__item">
+          <h3 class="features__title">
             Меняет мир вокруг
           </h3>
-          <p class="features-item__description">
+          <p class="features__description">
             Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
           </p>
         </section>
 
-        <section class="features-item">
-          <h3 class="features-item__title">
+        <section class="features__item">
+          <h3 class="features__title">
             Заводит новых друзей
           </h3>
-          <p class="features-item__description">
+          <p class="features__description">
             Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
           </p>
         </section>
 
       </div>
 
-      <section class="comments">
-        <h3 class="comments__title">
-          Николай Петров
-        </h3>
-        <blockquote class="comments__quote">
+      <section class="reviews">
+        <blockquote class="reviews__quote">
+          <div class="reviews__title">
+            <cite>
+              Николай Петров
+            </cite>
+          </div>
+          <p class="reviews__text">
           Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+          </p>
         </blockquote>
-        <nav class="pagination">
-          <a href="#" class="pagination__link"></a>
-          <a href="#" class="pagination__link pagination__link--active"></a>
-          <a href="#" class="pagination__link"></a>
-        </nav>
+        <div class="pagination">
+          <span class="pagination-item"></span>
+          <span class="pagination-item  pagination-item--active"></span>
+          <span class="pagination-item"></span>
+        </div>
       </section>
 
-      <section class="shop">
+      <section class="price">
 
-        <div class="shop__item">
-          <h4 class="shop__title">
+        <div class="price__item  price__item--bg_dark">
+          <h4 class="price__title">
             Стандарт
           </h4>
-          <p class="shop__price">
+          <p class="price__text">
             3,99 usd
           </p>
         </div>
 
-        <div class="shop-features">
-          <div class="shop-features__description">
+        <div class="price__item">
+          <div class="price__description">
             Розовый фильтр
           </div>
-          <div class="shop-features__description">
+          <div class="price__description">
             Смайлики
           </div>
-          <div class="shop-features__description">
+          <div class="price__description">
             Комментарии
           </div>
         </div>
 
-        <nav class="pagination">
-          <a href="#" class="pagination__link"></a>
-          <a href="#" class="pagination__link pagination__link--active"></a>
-          <a href="#" class="pagination__link"></a>
-        </nav>
+        <div class="pagination">
+          <span class="pagination-item"></span>
+          <span class="pagination-item  pagination-item--active"></span>
+          <span class="pagination-item"></span>
+        </div>
 
       </section>
 
       <section class="contacts">
-        <h2 class="title">
+        <h2 class="intro__title">
           Остались вопросы? Свяжитесь с нами!
         </h2>
 
         <h3 class="contacts__title">
           Звоните:
         </h3>
-        <p class="contacts__description">
+        <p class="contacts__text">
           +7 (812) 555-66-66
         </p>
 
         <h3 class="contacts__title">
           Пишите:
         </h3>
-        <p class="contacts__description">
+        <p class="contacts__text">
           mail@htmlacademy.ru
         </p>
 
         <h3 class="contacts__title">
           Приезжайте в гости:
         </h3>
-        <p class="contacts__description">
+        <p class="contacts__text">
           ул. Большая Конюшенная, 19/8
         </p>
 

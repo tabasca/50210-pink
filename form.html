@@ -4,22 +4,22 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
-  <body class="inner-page">
+  <body class="page">
 
-    <header class="main-header">
-      <div class="logo">
-        <a href="index.html"><img src="" alt="PINK"></a>
+    <header class="page-header">
+      <div class="logo header__logo">
+        <a class="page-header__logo-link" href="index.html"><img src="" alt="PINK"></a>
       </div>
 
-      <div class="main-header__btn-menu">
+      <div class="page-header__btn-menu">
       </div>
 
-      <nav class="main-nav clearfix">
-        <ul>
-          <li><a href="#">ИНФОРМАЦИЯ</a></li>
-          <li><a href="#">Блог</a></li>
-          <li><a href="#">отзывы</a></li>
-          <li><a href="form.html">конкурс</a></li>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#">ИНФОРМАЦИЯ</a></li>
+          <li class="main-nav__item"><a href="#">Блог</a></li>
+          <li class="main-nav__item"><a href="#">отзывы</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a href="form.html">конкурс</a></li>
         </ul>
       </nav>
     </header>
@@ -27,7 +27,7 @@
     <main class="main-section">
 
       <section class="intro">
-        <h1 class="title">
+        <h1 class="intro__title">
           Конкурс на самое безбашенное путешествие с Пинк
         </h1>
         <p class="intro__description">
@@ -35,113 +35,129 @@
         </p>
       </section>
 
-      <form class="contest-form">
+      <form class="form">
 
-        <fieldset class="contest-form__item contest-form__item--white-bg">
+        <fieldset class="form__item  form__item--bg_white">
           <label for="name">имя: *</label>
-          <input type="text" id="name" name="contest-form__item" value="Введите ваше имя" required>
+          <input type="text" id="name" name="name" value="Введите ваше имя" required>
 
           <label for="surname">фамилия: *</label>
-          <input type="text" id="surname" name="contest-form__item" value="Укажите фамилию" required>
+          <input type="text" id="surname" name="surname" value="Укажите фамилию" required>
 
           <label for="second-name">отчество: </label>
-          <input type="text" id="second-name" name="contest-form__item" value="Ну и отчество тоже">
+          <input type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
         </fieldset>
 
-        <fieldset class="contest-form__item contest-form__item--gray-bg">
-          <legend class="contest-form__title">
+        <fieldset class="form__item  form__item--bg_gray">
+          <legend class="form__title">
             С каким приложением путешествовали?*
           </legend>
-          <input type="checkbox" id="ios" name="contest-form__item" value="iOS" checked required>
+          <input type="checkbox" id="ios" name="ios" value="iOS" checked required>
           <label for="ios">Pink для iOS</label>
 
-          <input type="checkbox" id="android" name="contest-form__item" value="Android" required>
+          <input type="checkbox" id="android" name="android" value="Android" required>
           <label for="android">Pink для Android</label>
 
-          <input type="checkbox" id="windows-phone" name="contest-form__item" value="Windows Phone" required>
+          <input type="checkbox" id="windows-phone" name="windows-phone" value="Windows Phone" required>
           <label for="windows-phone">Windows Phone</label>
         </fieldset>
 
-        <fieldset class="contest-form__item contest-form__item--white-bg">
-          <legend class="contest-form__title">
+        <fieldset class="form__item  form__item--bg_white">
+          <legend class="form__title">
             Когда Вы путешествовали?*
           </legend>
-          <input type="text" id="departure" name="contest-form__item" value="1 апреля 2015" required>
+          <input type="text" id="departure" name="departure" value="1 апреля 2015" required>
           <label for="departure">Дата выезда</label>
 
           <button type="button" name="button" class="btn-plus"></button>
-          <input type="text" id="duration" class="for-plus for-minus" name="contest-form__item" value="10 дней" required>
+          <input class="form-item  btn-plus  btn-minus" type="text" id="duration" name="duration" value="10 дней" required>
           <button type="button" name="button" class="btn-minus"></button>
           <label for="duration">Продолжительность</label>
 
-          <input type="text" id="arrival" name="contest-form__item" value="1 апреля 2015" required>
+          <input type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
           <label for="arrival">Дата возвращения</label>
         </fieldset>
 
-        <fieldset class="contest-form__item contest-form__item--gray-bg">
-          <legend class="contest-form__title">
+        <fieldset class="form__item  form__item--bg_gray">
+          <legend class="form__title">
             Количество попутчиков *
           </legend>
 
-          <input type="text" name="contest-form__item" value="2 чел" required>
+          <button type="button" name="button" class="btn-plus"></button>
+          <input class="form-item  btn-plus  btn-minus" type="text" name="companions" value="2 чел" required>
+          <button type="button" name="button" class="btn-minus"></button>
 
-          <label for="name">Имя *</label>
-          <input type="text" id="name" name="contest-form__item" value="Введите ваше имя" required>
+          <ol class="form-list">
+            <li class="form-list__item">
+              <label for="name">Имя *</label>
+              <input type="text" id="name" name="name" value="Введите ваше имя" required>
 
-          <label for="nickname">Прозвище</label>
-          <input type="text" id="nickname" name="contest-form__item" value="Ну как же без этого!">
+              <label for="nickname">Прозвище</label>
+              <input type="text" id="nickname" name="nickname" value="Ну как же без этого!">
+            </li>
+
+            <li class="form-list__item">
+              <label for="name">Имя *</label>
+              <input type="text" id="name" name="name" value="Введите ваше имя" required>
+
+              <label for="nickname">Прозвище</label>
+              <input type="text" id="nickname" name="nickname" value="Ну как же без этого!">
+            </li>
+          </ol>
+
         </fieldset>
 
-        <fieldset class="contest-form__item contest-form__item--white-bg">
-          <legend class="contest-form__title">
+        <fieldset class="form__item  form__item--bg_white">
+          <legend class="form__title">
             Ваши безбашенные достижения в путешествии
           </legend>
-          <input type="checkbox" id="shark" name="contest-form__item" value="selfie-shark" checked>
+          <input type="checkbox" id="shark" name="shark" value="selfie-shark" checked>
           <label for="shark">Сделал селфи с акулой</label>
 
-          <input type="checkbox" id="sunburned" name="contest-form__item" value="sunburned" checked>
+          <input type="checkbox" id="sunburned" name="sunburned" value="sunburned" checked>
           <label for="sunburned">Обгорел на пляже</label>
 
-          <input type="checkbox" id="chak_norris" name="contest-form__item" value="chak_norris">
+          <input type="checkbox" id="chak_norris" name="chak_norris" value="chak_norris">
           <label for="chak_norris">Видел Чака Норриса</label>
 
-          <input type="checkbox" id="souvenirs" name="contest-form__item" value="souvenirs">
+          <input type="checkbox" id="souvenirs" name="souvenirs" value="souvenirs">
           <label for="souvenirs">Накупил сувениров</label>
 
-          <input type="checkbox" id="tower" name="contest-form__item" value="tower" checked>
+          <input type="checkbox" id="tower" name="tower" value="tower" checked>
           <label for="tower">Удержал башню</label>
 
-          <input type="checkbox" id="hotel" name="contest-form__item" value="hotel" checked>
+          <input type="checkbox" id="hotel" name="hotel" value="hotel" checked>
           <label for="hotel">Разгромил отель</label>
         </fieldset>
 
-        <fieldset class="contest-form__item contest-form__item--gray-bg">
-          <legend class="contest-form__title">
+        <fieldset class="form__item  form__item--bg_gray">
+          <legend class="form__title">
             Ваши фотографии из поездки *
           </legend>
 
           <!-- способ номер4 из http://habrahabr.ru/post/189570/ -->
 
           <label for="photo">
-            <span class="btn">Загрузить фото</span>
+            <button class="btn">Загрузить фото</button>
             <mark>Файл не выбран</mark>
             <input type="file" id="photo" name="contest-form__item" required>
           </label>
 
-          <img class="contest-form_photo" src="#" alt="photo_1">
-          <img class="contest-form_photo" src="#" alt="photo_2">
-          <img class="contest-form_photo" src="#" alt="photo_3">
-          <img class="contest-form_photo" src="#" alt="photo_4">
-          <img class="contest-form_photo" src="#" alt="photo_5">
-          <img class="contest-form_photo" src="#" alt="photo_6">
-          <img class="contest-form_photo" src="#" alt="photo_7">
-          <img class="contest-form_photo" src="#" alt="photo_8">
-
+          <div class="photo">
+            <img class="photo__item" src="#" alt="photo_1">
+            <img class="photo__item" src="#" alt="photo_2">
+            <img class="photo__item" src="#" alt="photo_3">
+            <img class="photo__item" src="#" alt="photo_4">
+            <img class="photo__item" src="#" alt="photo_5">
+            <img class="photo__item" src="#" alt="photo_6">
+            <img class="photo__item" src="#" alt="photo_7">
+            <img class="photo__item" src="#" alt="photo_8">
+          </div>
         </fieldset>
 
-        <input class="btn btn--green" type="submit" value="ОТправить форму">
+        <input class="btn  btn--green" type="submit" value="Отправить форму">
 
-        <div class="contest-form__item contest-form__item--white-bg">
+        <div class="form__item  form__item--bg_white">
           <p>* - обязательные поля</p>
         </div>
 
@@ -149,7 +165,7 @@
 
       <!-- success pop up -->
 
-      <section class="popup">
+      <div class="popup">
 
         <h3 class="popup__title">
           Ваша заявка отправлена
@@ -158,17 +174,17 @@
           Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
         </p>
 
-        <div class="btn btn--green">
-          <span>Закрыть окно</span>
+        <div class="btn  btn--green">
+          <button class="btn">Закрыть окно</button>
         </div>
 
-      </section>
+      </div>
 
       <!-- end of success pop up -->
 
       <!-- failure pop up -->
 
-      <section class="popup">
+      <div class="popup">
 
         <h3 class="popup__title">
           Что-то пошло не так!
@@ -177,35 +193,35 @@
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
         </p>
 
-        <div class="btn btn--green">
-          <span>Ок</span>
+        <div class="btn  btn--green">
+          <button class="btn">Ок</button>
         </div>
 
-      </section>
+      </div>
 
       <!-- end of failure pop up -->
 
     </main>
 
-    <footer class="inner-footer">
+    <footer class="page-footer">
 
-      <section class="logo-with-glasses">
+      <section class="page-footer__logo">
         <p>
-          <a href="#"><i class="sprite sprite-ico-pink"></i></a>
+          <a class="page-footer__logo-link" href="#"></a>
         </p>
       </section>
 
       <section class="social">
         <p>
-          <a href="#"><i class="icon-twitter"></i></a>
-          <a href="#"><i class="icon-facebook"></i></a>
-          <a href="#"><i class="icon-youtube"></i></a>
+          <a class="social-link" href="#">VKontakte</a>
+          <a class="social-link" href="#">Facebook</a>
+          <a class="social-link" href="#">YouTube</a>
         </p>
       </section>
 
       <section class="copyright">
         <p>разработано
-        <a class="copyright__logo" href="#"><i class="sprite sprite-ico-academy"></i></a>
+        <a class="copyright__logo" href="#"></a>
         </p>
       </section>
 
