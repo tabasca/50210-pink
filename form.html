@@ -16,10 +16,10 @@
 
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="#">ИНФОРМАЦИЯ</a></li>
-          <li class="main-nav__item"><a href="#">Блог</a></li>
-          <li class="main-nav__item"><a href="#">отзывы</a></li>
-          <li class="main-nav__item  main-nav__item--active"><a href="form.html">конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  link" href="#">ИНФОРМАЦИЯ</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  link" href="#">Блог</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  link" href="#">отзывы</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link  link" href="form.html">конкурс</a></li>
         </ul>
       </nav>
     </header>
@@ -38,44 +38,44 @@
       <form class="form">
 
         <fieldset class="form__item  form__item--bg_white">
-          <label for="name">имя: *</label>
-          <input type="text" id="name" name="name" value="Введите ваше имя" required>
+          <label class="form-label" for="name">имя: *</label>
+          <input class="form-input" type="text" id="name" name="name" value="Введите ваше имя" required>
 
-          <label for="surname">фамилия: *</label>
-          <input type="text" id="surname" name="surname" value="Укажите фамилию" required>
+          <label class="form-label" for="surname">фамилия: *</label>
+          <input class="form-input" type="text" id="surname" name="surname" value="Укажите фамилию" required>
 
-          <label for="second-name">отчество: </label>
-          <input type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
+          <label class="form-label" for="second-name">отчество: </label>
+          <input class="form-input" type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
         </fieldset>
 
         <fieldset class="form__item  form__item--bg_gray">
           <legend class="form__title">
             С каким приложением путешествовали?*
           </legend>
-          <input type="checkbox" id="ios" name="ios" value="iOS" checked required>
-          <label for="ios">Pink для iOS</label>
+          <input class="form-input" type="checkbox" id="ios" name="ios" value="iOS" checked required>
+          <label class="form-label" for="ios">Pink для iOS</label>
 
-          <input type="checkbox" id="android" name="android" value="Android" required>
-          <label for="android">Pink для Android</label>
+          <input class="form-input" type="checkbox" id="android" name="android" value="Android" required>
+          <label class="form-label" for="android">Pink для Android</label>
 
-          <input type="checkbox" id="windows-phone" name="windows-phone" value="Windows Phone" required>
-          <label for="windows-phone">Windows Phone</label>
+          <input class="form-input" type="checkbox" id="windows-phone" name="windows-phone" value="Windows Phone" required>
+          <label class="form-label" for="windows-phone">Windows Phone</label>
         </fieldset>
 
         <fieldset class="form__item  form__item--bg_white">
           <legend class="form__title">
             Когда Вы путешествовали?*
           </legend>
-          <input type="text" id="departure" name="departure" value="1 апреля 2015" required>
-          <label for="departure">Дата выезда</label>
+          <input class="form-input" type="text" id="departure" name="departure" value="1 апреля 2015" required>
+          <label class="form-label" for="departure">Дата выезда</label>
 
           <button type="button" name="button" class="btn-plus"></button>
-          <input class="form-item  btn-plus  btn-minus" type="text" id="duration" name="duration" value="10 дней" required>
+          <input class="form-input  btn-plus  btn-minus" type="text" id="duration" name="duration" value="10 дней" required>
           <button type="button" name="button" class="btn-minus"></button>
-          <label for="duration">Продолжительность</label>
+          <label class="form-label" for="duration">Продолжительность</label>
 
-          <input type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
-          <label for="arrival">Дата возвращения</label>
+          <input class="form-input" type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
+          <label class="form-label" for="arrival">Дата возвращения</label>
         </fieldset>
 
         <fieldset class="form__item  form__item--bg_gray">
@@ -84,24 +84,24 @@
           </legend>
 
           <button type="button" name="button" class="btn-plus"></button>
-          <input class="form-item  btn-plus  btn-minus" type="text" name="companions" value="2 чел" required>
+          <input class="form-input  btn-plus  btn-minus" type="text" name="companions" value="2 чел" required>
           <button type="button" name="button" class="btn-minus"></button>
 
           <ol class="form-list">
             <li class="form-list__item">
-              <label for="name">Имя *</label>
-              <input type="text" id="name" name="name" value="Введите ваше имя" required>
+              <label class="form-label" for="name">Имя *</label>
+              <input class="form-input" type="text" id="name" name="name" value="Введите ваше имя" required>
 
-              <label for="nickname">Прозвище</label>
-              <input type="text" id="nickname" name="nickname" value="Ну как же без этого!">
+              <label class="form-label" for="nickname">Прозвище</label>
+              <input class="form-input" type="text" id="nickname" name="nickname" value="Ну как же без этого!">
             </li>
 
             <li class="form-list__item">
-              <label for="name">Имя *</label>
-              <input type="text" id="name" name="name" value="Введите ваше имя" required>
+              <label class="form-label" for="name">Имя *</label>
+              <input class="form-input" type="text" id="name" name="name" value="Введите ваше имя" required>
 
-              <label for="nickname">Прозвище</label>
-              <input type="text" id="nickname" name="nickname" value="Ну как же без этого!">
+              <label class="form-label" for="nickname">Прозвище</label>
+              <input class="form-input" type="text" id="nickname" name="nickname" value="Ну как же без этого!">
             </li>
           </ol>
 
@@ -111,23 +111,23 @@
           <legend class="form__title">
             Ваши безбашенные достижения в путешествии
           </legend>
-          <input type="checkbox" id="shark" name="shark" value="selfie-shark" checked>
-          <label for="shark">Сделал селфи с акулой</label>
+          <input class="form-input" type="checkbox" id="shark" name="shark" value="selfie-shark" checked>
+          <label class="form-label" for="shark">Сделал селфи с акулой</label>
 
-          <input type="checkbox" id="sunburned" name="sunburned" value="sunburned" checked>
-          <label for="sunburned">Обгорел на пляже</label>
+          <input class="form-input" type="checkbox" id="sunburned" name="sunburned" value="sunburned" checked>
+          <label class="form-label" for="sunburned">Обгорел на пляже</label>
 
-          <input type="checkbox" id="chak_norris" name="chak_norris" value="chak_norris">
-          <label for="chak_norris">Видел Чака Норриса</label>
+          <input class="form-input" type="checkbox" id="chak_norris" name="chak_norris" value="chak_norris">
+          <label class="form-label" for="chak_norris">Видел Чака Норриса</label>
 
-          <input type="checkbox" id="souvenirs" name="souvenirs" value="souvenirs">
-          <label for="souvenirs">Накупил сувениров</label>
+          <input class="form-input" type="checkbox" id="souvenirs" name="souvenirs" value="souvenirs">
+          <label class="form-label" for="souvenirs">Накупил сувениров</label>
 
-          <input type="checkbox" id="tower" name="tower" value="tower" checked>
-          <label for="tower">Удержал башню</label>
+          <input class="form-input" type="checkbox" id="tower" name="tower" value="tower" checked>
+          <label class="form-label" for="tower">Удержал башню</label>
 
-          <input type="checkbox" id="hotel" name="hotel" value="hotel" checked>
-          <label for="hotel">Разгромил отель</label>
+          <input class="form-input" type="checkbox" id="hotel" name="hotel" value="hotel" checked>
+          <label class="form-label" for="hotel">Разгромил отель</label>
         </fieldset>
 
         <fieldset class="form__item  form__item--bg_gray">
@@ -137,10 +137,10 @@
 
           <!-- способ номер4 из http://habrahabr.ru/post/189570/ -->
 
-          <label for="photo">
+          <label class="form-label" for="photo">
             <button class="btn">Загрузить фото</button>
             <mark>Файл не выбран</mark>
-            <input type="file" id="photo" name="contest-form__item" required>
+            <input class="form-input" type="file" id="photo" name="contest-form__item" required>
           </label>
 
           <div class="photo">
