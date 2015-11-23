@@ -1,146 +1,151 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body class="page">
 
-    <header class="page-header">
-      <div class="logo header__logo">
-        <a class="page-header__logo-link" href="index.html"><img src="" alt="PINK"></a>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-      <div class="page-header__btn-menu">
-      </div>
+<body class="page">
 
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link  link" href="#">ИНФОРМАЦИЯ</a></li>
-          <li class="main-nav__item"><a class="main-nav__link  link" href="#">Блог</a></li>
-          <li class="main-nav__item"><a class="main-nav__link  link" href="#">отзывы</a></li>
-          <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link  link" href="form.html">конкурс</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="page-header">
+    <div class="logo header__logo">
+      <a class="page-header__logo-link" href="index.html">
+        <img src="" alt="PINK">
+      </a>
+    </div>
 
-    <main class="main-section">
+    <div class="page-header__btn-menu">
+    </div>
 
-      <section class="intro">
-        <h1 class="intro__title">
-          Конкурс на самое безбашенное путешествие с Пинк
-        </h1>
-        <p class="intro__description">
-          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
-        </p>
-      </section>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link  link" href="#">ИНФОРМАЦИЯ</a></li>
+        <li class="main-nav__item"><a class="main-nav__link  link" href="#">Блог</a></li>
+        <li class="main-nav__item"><a class="main-nav__link  link" href="#">отзывы</a></li>
+        <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link  link" href="form.html">конкурс</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <form class="form">
+  <main class="main-section">
 
-        <fieldset class="form__item  form__item--bg_white">
-          <label class="form-label" for="name">имя: *</label>
-          <input class="form-input" type="text" id="name" name="name" value="Введите ваше имя" required>
+    <section class="intro">
+      <h1 class="intro__title">
+        Конкурс на самое безбашенное путешествие с Пинк
+      </h1>
+      <p class="intro__description">
+        Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+      </p>
+    </section>
 
-          <label class="form-label" for="surname">фамилия: *</label>
-          <input class="form-input" type="text" id="surname" name="surname" value="Укажите фамилию" required>
+    <form class="form">
 
-          <label class="form-label" for="second-name">отчество: </label>
-          <input class="form-input" type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
-        </fieldset>
+      <fieldset class="form__item  form__item--bg_white">
+        <label class="label  checkbox" for="name">имя: *</label>
+        <input class="input  checkbox" type="text" id="name" name="name" value="Введите ваше имя" required>
 
-        <fieldset class="form__item  form__item--bg_gray">
-          <legend class="form__title">
-            С каким приложением путешествовали?*
-          </legend>
-          <input class="form-input" type="checkbox" id="ios" name="ios" value="iOS" checked required>
-          <label class="form-label" for="ios">Pink для iOS</label>
+        <label class="label  checkbox" for="surname">фамилия: *</label>
+        <input class="input  checkbox" type="text" id="surname" name="surname" value="Укажите фамилию" required>
 
-          <input class="form-input" type="checkbox" id="android" name="android" value="Android" required>
-          <label class="form-label" for="android">Pink для Android</label>
+        <label class="label  checkbox" for="second-name">отчество: </label>
+        <input class="input  checkbox" type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
+      </fieldset>
 
-          <input class="form-input" type="checkbox" id="windows-phone" name="windows-phone" value="Windows Phone" required>
-          <label class="form-label" for="windows-phone">Windows Phone</label>
-        </fieldset>
+      <fieldset class="form__item  form__item--bg_gray">
+        <legend class="form__title">
+          С каким приложением путешествовали?*
+        </legend>
+        <input class="input  radio" type="radio" id="ios" name="ios" value="iOS" checked required>
+        <label class="label  radio" for="ios">Pink для iOS</label>
 
-        <fieldset class="form__item  form__item--bg_white">
-          <legend class="form__title">
-            Когда Вы путешествовали?*
-          </legend>
-          <input class="form-input" type="text" id="departure" name="departure" value="1 апреля 2015" required>
-          <label class="form-label" for="departure">Дата выезда</label>
+        <input class="input  radio" type="radio" id="android" name="android" value="Android" required>
+        <label class="label  radio" for="android">Pink для Android</label>
 
-          <button type="button" name="button" class="btn-plus"></button>
-          <input class="form-input  btn-plus  btn-minus" type="text" id="duration" name="duration" value="10 дней" required>
-          <button type="button" name="button" class="btn-minus"></button>
-          <label class="form-label" for="duration">Продолжительность</label>
+        <input class="input  radio" type="radio" id="windows-phone" name="windows-phone" value="Windows Phone" required>
+        <label class="label  radio" for="windows-phone">Windows Phone</label>
+      </fieldset>
 
-          <input class="form-input" type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
-          <label class="form-label" for="arrival">Дата возвращения</label>
-        </fieldset>
+      <fieldset class="form__item  form__item--bg_white">
+        <legend class="form__title">
+          Когда Вы путешествовали?*
+        </legend>
+        <input class="input" type="text" id="departure" name="departure" value="1 апреля 2015" required>
+        <label class="label" for="departure">Дата выезда</label>
 
-        <fieldset class="form__item  form__item--bg_gray">
-          <legend class="form__title">
-            Количество попутчиков *
-          </legend>
+        <button class="btn-plus" type="button" name="button"></button>
+        <input class="input  btn-plus  btn-minus" type="text" id="duration" name="duration" value="10 дней" required>
+        <button class="btn-minus" type="button" name="button"></button>
+        <label class="label" for="duration">Продолжительность</label>
 
-          <button type="button" name="button" class="btn-plus"></button>
-          <input class="form-input  btn-plus  btn-minus" type="text" name="companions" value="2 чел" required>
-          <button type="button" name="button" class="btn-minus"></button>
+        <input class="input" type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
+        <label class="label" for="arrival">Дата возвращения</label>
+      </fieldset>
 
-          <ol class="form-list">
-            <li class="form-list__item">
-              <label class="form-label" for="name">Имя *</label>
-              <input class="form-input" type="text" id="name" name="name" value="Введите ваше имя" required>
+      <fieldset class="form__item  form__item--bg_gray">
+        <legend class="form__title">
+          Количество попутчиков *
+        </legend>
 
-              <label class="form-label" for="nickname">Прозвище</label>
-              <input class="form-input" type="text" id="nickname" name="nickname" value="Ну как же без этого!">
-            </li>
+        <button class="btn-plus" type="button" name="button"></button>
+        <input class="input  btn-plus  btn-minus" type="text" name="companions" value="2 чел" required>
+        <button class="btn-minus" type="button" name="button"></button>
 
-            <li class="form-list__item">
-              <label class="form-label" for="name">Имя *</label>
-              <input class="form-input" type="text" id="name" name="name" value="Введите ваше имя" required>
+        <ol class="form-list">
+          <li class="form-list__item">
+            <label class="label" for="name">Имя *</label>
+            <input class="input" type="text" id="name" name="name" value="Введите ваше имя" required>
 
-              <label class="form-label" for="nickname">Прозвище</label>
-              <input class="form-input" type="text" id="nickname" name="nickname" value="Ну как же без этого!">
-            </li>
-          </ol>
+            <label class="label" for="nickname">Прозвище</label>
+            <input class="input" type="text" id="nickname" name="nickname" value="Ну как же без этого!">
+          </li>
 
-        </fieldset>
+          <li class="form-list__item">
+            <label class="label" for="name">Имя *</label>
+            <input class="input" type="text" id="name" name="name" value="Введите ваше имя" required>
 
-        <fieldset class="form__item  form__item--bg_white">
-          <legend class="form__title">
-            Ваши безбашенные достижения в путешествии
-          </legend>
-          <input class="form-input" type="checkbox" id="shark" name="shark" value="selfie-shark" checked>
-          <label class="form-label" for="shark">Сделал селфи с акулой</label>
+            <label class="label" for="nickname">Прозвище</label>
+            <input class="input" type="text" id="nickname" name="nickname" value="Ну как же без этого!">
+          </li>
+        </ol>
 
-          <input class="form-input" type="checkbox" id="sunburned" name="sunburned" value="sunburned" checked>
-          <label class="form-label" for="sunburned">Обгорел на пляже</label>
+      </fieldset>
 
-          <input class="form-input" type="checkbox" id="chak_norris" name="chak_norris" value="chak_norris">
-          <label class="form-label" for="chak_norris">Видел Чака Норриса</label>
+      <fieldset class="form__item  form__item--bg_white">
+        <legend class="form__title">
+          Ваши безбашенные достижения в путешествии
+        </legend>
+        <input class="input" type="checkbox" id="shark" name="shark" value="selfie-shark" checked>
+        <label class="label" for="shark">Сделал селфи с акулой</label>
 
-          <input class="form-input" type="checkbox" id="souvenirs" name="souvenirs" value="souvenirs">
-          <label class="form-label" for="souvenirs">Накупил сувениров</label>
+        <input class="input" type="checkbox" id="sunburned" name="sunburned" value="sunburned" checked>
+        <label class="label" for="sunburned">Обгорел на пляже</label>
 
-          <input class="form-input" type="checkbox" id="tower" name="tower" value="tower" checked>
-          <label class="form-label" for="tower">Удержал башню</label>
+        <input class="input" type="checkbox" id="chak_norris" name="chak_norris" value="chak_norris">
+        <label class="label" for="chak_norris">Видел Чака Норриса</label>
 
-          <input class="form-input" type="checkbox" id="hotel" name="hotel" value="hotel" checked>
-          <label class="form-label" for="hotel">Разгромил отель</label>
-        </fieldset>
+        <input class="input" type="checkbox" id="souvenirs" name="souvenirs" value="souvenirs">
+        <label class="label" for="souvenirs">Накупил сувениров</label>
 
-        <fieldset class="form__item  form__item--bg_gray">
-          <legend class="form__title">
-            Ваши фотографии из поездки *
-          </legend>
+        <input class="input" type="checkbox" id="tower" name="tower" value="tower" checked>
+        <label class="label" for="tower">Удержал башню</label>
 
-          <!-- способ номер4 из http://habrahabr.ru/post/189570/ -->
+        <input class="input" type="checkbox" id="hotel" name="hotel" value="hotel" checked>
+        <label class="label" for="hotel">Разгромил отель</label>
+      </fieldset>
 
-          <label class="form-label" for="photo">
+      <fieldset class="form__item  form__item--bg_gray">
+        <legend class="form__title">
+          Ваши фотографии из поездки *
+        </legend>
+
+        <!-- способ номер4 из http://habrahabr.ru/post/189570/ -->
+
+        <div class="photo-attach">
+          <label class="label" for="photo">
             <button class="btn">Загрузить фото</button>
             <mark>Файл не выбран</mark>
-            <input class="form-input" type="file" id="photo" name="contest-form__item" required>
+            <input class="input" type="file" id="photo" name="contest-form__item" required>
           </label>
 
           <div class="photo">
@@ -153,80 +158,82 @@
             <img class="photo__item" src="#" alt="photo_7">
             <img class="photo__item" src="#" alt="photo_8">
           </div>
-        </fieldset>
-
-        <input class="btn  btn--green" type="submit" value="Отправить форму">
-
-        <div class="form__item  form__item--bg_white">
-          <p>* - обязательные поля</p>
         </div>
+      </fieldset>
 
-      </form>
+      <input class="btn  btn--green" type="submit" value="Отправить форму">
 
-      <!-- success pop up -->
-
-      <div class="popup">
-
-        <h3 class="popup__title">
-          Ваша заявка отправлена
-        </h3>
-        <p class="popup__description">
-          Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
-        </p>
-
-        <div class="btn  btn--green">
-          <button class="btn">Закрыть окно</button>
-        </div>
-
+      <div class="form__item  form__item--bg_white">
+        <p class="text">* - обязательные поля</p>
       </div>
 
-      <!-- end of success pop up -->
+    </form>
 
-      <!-- failure pop up -->
+    <!-- success pop up -->
 
-      <div class="popup">
+    <div class="popup">
 
-        <h3 class="popup__title">
-          Что-то пошло не так!
-        </h3>
-        <p class="popup__description">
-          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-        </p>
+      <h3 class="popup__title">
+        Ваша заявка отправлена
+      </h3>
+      <p class="popup__description">
+        Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+      </p>
 
-        <div class="btn  btn--green">
-          <button class="btn">Ок</button>
-        </div>
-
+      <div class="btn  btn--green">
+        <button class="btn">Закрыть окно</button>
       </div>
 
-      <!-- end of failure pop up -->
+    </div>
 
-    </main>
+    <!-- end of success pop up -->
 
-    <footer class="page-footer">
+    <!-- failure pop up -->
 
-      <section class="page-footer__logo">
-        <p>
-          <a class="page-footer__logo-link" href="#"></a>
-        </p>
-      </section>
+    <div class="popup">
 
-      <section class="social">
-        <p>
-          <a class="social-link" href="#">VKontakte</a>
-          <a class="social-link" href="#">Facebook</a>
-          <a class="social-link" href="#">YouTube</a>
-        </p>
-      </section>
+      <h3 class="popup__title">
+        Что-то пошло не так!
+      </h3>
+      <p class="popup__description">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </p>
 
-      <section class="copyright">
-        <p>разработано
+      <div class="btn  btn--green">
+        <button class="btn">Ок</button>
+      </div>
+
+    </div>
+
+    <!-- end of failure pop up -->
+
+  </main>
+
+  <footer class="page-footer">
+
+    <section class="page-footer__logo">
+      <p class="text">
+        <a class="page-footer__logo-link" href="#"></a>
+      </p>
+    </section>
+
+    <section class="social">
+      <p class="text">
+        <a class="social__link" href="#">VKontakte</a>
+        <a class="social__link" href="#">Facebook</a>
+        <a class="social__link" href="#">YouTube</a>
+      </p>
+    </section>
+
+    <section class="copyright">
+      <p class="text">разработано
         <a class="copyright__logo" href="#"></a>
-        </p>
-      </section>
+      </p>
+    </section>
 
-    </footer>
+  </footer>
 
 
-  </body>
+</body>
+
 </html>
