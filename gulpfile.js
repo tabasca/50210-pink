@@ -20,6 +20,9 @@ gulp.task("start", ["style"], function() {
   gulp.watch("less/**/*.less", ["style"]);
 });
 
+gulp.task('hello', function() {
+  console.log('Hello Zell');
+});
 
 
 // Оставьте эту строку в самом конце файла

@@ -29,5 +29,9 @@
   },
   "engines": {
     "node": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.5"
   }
 }
