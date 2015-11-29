@@ -1,22 +1,17 @@
 .quote {
   margin: 0;
   margin-top: 50px - 12px;
-
   .wrapper();
-}
-.quote__title {
-
-  font-size: @font-size--h3;
-  line-height: 30px;
-}
-
-.quote__cite {
-  color: @black;
-
-  font-style: normal;
-  font-weight: 700;
-}
-
-.quote__text {
-  line-height: 30px;
+  &__title {
+    font-size: @font-size--h3;
+    line-height: 30 / 18;
+  }
+  &__cite {
+    color: @black;
+    font-style: normal;
+    font-weight: 700;
+  }
+  &__text {
+    line-height: 30 / 14;
+  }
 }

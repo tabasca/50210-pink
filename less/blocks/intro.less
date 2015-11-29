@@ -1,46 +1,40 @@
 .intro {
-  background: @blue;
-
+  position: relative;
+  background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
+  background-size: auto;
+  .container();
   &--sub {
     margin-bottom: 70px - 2;
     background: @white;
   }
-   .container();
-   .clearfix();
-}
-.intro__title {
-  margin: 0;
-  padding-top: 89px;
-  padding-bottom: 318px;
-  font-size: @font-size--h1;
-  font-weight: 400;
-  line-height: @font-size--h1 + 2;
-  color: @white;
-  background: url("../img/index_top.jpg") no-repeat center center;
-  &--gray {
-    margin-top: 46px - 2px;
-    padding-top: 0;
-    padding-bottom: 0;
-    color: @blue;
-    background: @white;
+  &__title {
+    margin: 0;
+    padding-top: 89px;
+    padding-bottom: 318px - 4 + 28; //minus line-height and plus margin form btn
+    font-size: @font-size--h1;
+    font-weight: 300;
+    line-height: 28 / 24;
+    color: @white;
+    &--gray {
+      padding-top: 46px - 2px;
+      padding-bottom: 0;
+      color: @dark-blue;
+      background: @white;
+    }
+    .wrapper();
+    .clearfix();
   }
-   .wrapper();
-}
-.intro__text {
-  padding-top: 116px - 10;
-  margin-bottom: 37px - 10;
-  line-height: 24px;
-  color: @white;
-
-  background: url('../img/logo.png') no-repeat center 20%;
-
-
-  .wrapper();
-}
-.intro__btn {
-  margin: auto;
-  margin-top: 28px;
-
-  border-radius: 30px;
-  .clearfix();
+  &__text {
+    padding-top: 29px - 10;
+    padding-bottom: 37px - 10;
+    line-height: 24 / 14;
+    color: @white;
+    //background: url(../img/logo.png) no-repeat center 20%;
+    .wrapper();
+    .clearfix();
+  }
+  &__btn {
+    margin-top: 28px;
+    border-radius: 30px;
+  }
 }

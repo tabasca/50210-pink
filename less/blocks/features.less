@@ -1,24 +1,23 @@
 .features {
+  padding-top: 88px - 6;
   padding-bottom: 325px - 6;
   color: @black;
-  background: @gray url("../img/iphone.png") no-repeat center 108%;
+  background: @gray url(../img/iphone.png) no-repeat center 110%;
+  .container();
   .wrapper();
   .clearfix();
-}
-.features__item:first-child {
-  margin-top: 88px - 6;
-}
-.features__title {
-  margin: 0;
-  padding: 0;
-  font-size: @font-size--h3;
-  font-weight: 700;
-  line-height: 24px;
-}
-.features__description {
-  margin: 0;
-  margin-top: 25px - 6 - 6;
-  margin-bottom: 43px - 6 - 6;
-  color: @dark-blue;
-  line-height: 24px;
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: @font-size--h3;
+    font-weight: 700;
+    line-height: 24 / 18;
+  }
+  &__description {
+    margin: 0;
+    margin-top: 25px - 6 - 6;
+    margin-bottom: 43px - 6 - 6;
+    color: @dark-blue;
+    line-height: 24 / 14;
+  }
 }
