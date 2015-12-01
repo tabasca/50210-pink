@@ -4,7 +4,7 @@
   background-size: auto;
   .container();
   &--sub {
-    margin-bottom: 70px - 2;
+    margin-bottom: 70px - 2; //minus line-height
     background: @white;
   }
   &__title {
@@ -16,7 +16,7 @@
     line-height: 28 / 24;
     color: @white;
     &--gray {
-      padding-top: 46px - 2px;
+      padding-top: 46px - 2px; //minus line-height
       padding-bottom: 0;
       color: @dark-blue;
       background: @white;
@@ -25,10 +25,11 @@
     .clearfix();
   }
   &__text {
-    padding-top: 29px - 10;
-    padding-bottom: 37px - 10;
+    padding-top: 29px - 10; //minus line-height
+    padding-bottom: 37px - 10; //minus line-height
     line-height: 24 / 14;
     color: @white;
+
     //background: url(../img/logo.png) no-repeat center 20%;
     .wrapper();
     .clearfix();

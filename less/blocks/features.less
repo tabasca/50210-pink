@@ -1,8 +1,9 @@
 .features {
-  padding-top: 88px - 6;
-  padding-bottom: 325px - 6;
+  padding-top: 88px - 6; //minus line-height
+
+// padding-bottom: -42px;
   color: @black;
-  background: @gray url(../img/iphone.png) no-repeat center 110%;
+  background: @gray;
   .container();
   .wrapper();
   .clearfix();
@@ -15,9 +16,15 @@
   }
   &__description {
     margin: 0;
-    margin-top: 25px - 6 - 6;
-    margin-bottom: 43px - 6 - 6;
+    margin-top: 25px - 6 - 6; //minus line-height
+    margin-bottom: 43px - 6 - 6; //minus line-height
     color: @dark-blue;
     line-height: 24 / 14;
+  }
+  &__photo {
+    width: 160px;
+    height: 320px;
+    margin-top: 46px - 31px; //minus margin from features__description
+    padding: 0;
   }
 }
