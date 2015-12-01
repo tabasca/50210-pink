@@ -1,0 +1,41 @@
+.intro {
+  position: relative;
+  background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
+  background-size: auto;
+  .container();
+  &--sub {
+    margin-bottom: 70px - 2; //minus line-height
+    background: @white;
+  }
+  &__title {
+    margin: 0;
+    padding-top: 89px;
+    padding-bottom: 318px - 4 + 28; //minus line-height and plus margin form btn
+    font-size: @font-size--h1;
+    font-weight: 300;
+    line-height: 28 / 24;
+    color: @white;
+    &--gray {
+      padding-top: 46px - 2px; //minus line-height
+      padding-bottom: 0;
+      color: @dark-blue;
+      background: @white;
+    }
+    .wrapper();
+    .clearfix();
+  }
+  &__text {
+    padding-top: 29px - 10; //minus line-height
+    padding-bottom: 37px - 10; //minus line-height
+    line-height: 24 / 14;
+    color: @white;
+
+    //background: url(../img/logo.png) no-repeat center 20%;
+    .wrapper();
+    .clearfix();
+  }
+  &__btn {
+    margin-top: 28px;
+    border-radius: 30px;
+  }
+}

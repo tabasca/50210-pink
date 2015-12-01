@@ -4,14 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,700italic,300italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/wallop/wallop.css">
 </head>
 
 <body class="page">
 
   <header class="page-header">
-    <div class="logo  header__logo">
+    <div class="logo  page-header__logo">
       <a class="page-header__logo-link" href="index.html">
-        <img src="#" alt="PINK">
+        <img src="img/pink-logo.png" alt="PINK">
       </a>
     </div>
 
@@ -30,17 +34,28 @@
 
   <main class="main-section">
 
-    <section class="intro  main-intro">
+    <section class="intro  intro--main">
       <h1 class="intro__title">
         Взгляните на жизнь иначе!
       </h1>
       <a class="btn  intro__btn" href="#">Скачать приложение</a>
+      <div class="platform">
+        <a class="platform__link  platform__link--apple" href="#">
+          <img src="img/apple-logo.png" alt="iphone">
+        </a>
+        <a class="platform__link  platform__link--android" href="#">
+          <img src="img/android-logo.png" alt="android">
+        </a>
+        <a class="platform__link  platform__link--microsoft" href="#">
+          <img src="img/microsoft-logo.png" alt="microsoft">
+        </a>
+      </div>
       <p class="intro__text">
         Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
       </p>
     </section>
 
-    <div class="intro">
+    <div class="intro intro--sub">
       <h2 class="intro__title  intro__title--gray">
         Устали от серости мегаполиса?
       </h2>
@@ -74,62 +89,150 @@
           Заводит новых друзей
         </h3>
         <p class="features__description">
-          Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
         </p>
       </section>
 
+      <img src="img/iphone.png" alt="" class="features__photo">
+
     </div>
 
-    <section class="reviews">
+    <!-- <section class="reviews">
 
       <blockquote class="quote">
         <div class="quote__title">
-          <cite>
+          <cite class="quote__cite">
             Николай Петров
           </cite>
         </div>
         <p class="quote__text">
-          Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+          &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
         </p>
-      </blockquote>
-      <div class="pagination">
-        <span class="pagination__item"></span>
-        <span class="pagination__item  pagination__item--active"></span>
-        <span class="pagination__item"></span>
+      </blockquote> -->
+    <section class="slider slider--reviews">
+      <input class="slider__input" type="radio" id="btn-1" name="toggle" checked>
+      <input class="slider__input" type="radio" id="btn-2" name="toggle">
+      <input class="slider__input" type="radio" id="btn-3" name="toggle">
+      <div class="slider__controls">
+        <label class="slider__label" for="btn-1"></label>
+        <label class="slider__label" for="btn-2"></label>
+        <label class="slider__label" for="btn-3"></label>
+      </div>
+      <div class="slider__inner">
+        <div class="slider__slides">
+          <blockquote class="quote">
+            <div class="quote__title">
+              <cite class="quote__cite">
+                Николай Петров
+              </cite>
+            </div>
+            <p class="quote__text">
+              &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
+            </p>
+          </blockquote>
+          <blockquote class="quote">
+            <div class="quote__title">
+              <cite class="quote__cite">
+                N/A
+              </cite>
+            </div>
+            <p class="quote__text">
+              &#171;N/A&#187;
+            </p>
+          </blockquote>
+          <blockquote class="quote">
+            <div class="quote__title">
+              <cite class="quote__cite">
+                N/A
+              </cite>
+            </div>
+            <p class="quote__text">
+              &#171;N/A&#187;
+            </p>
+          </blockquote>
+        </div>
       </div>
 
     </section>
 
-    <section class="price">
-
-      <div class="price__headline">
-        <h4 class="price__title">
-          Стандарт
-        </h4>
-        <p class="price__text">
-          3,99 usd
-        </p>
-      </div>
-
-      <div class="price__item">
-        <div class="price__description">
-          Розовый фильтр
-        </div>
-        <div class="price__description">
-          Смайлики
-        </div>
-        <div class="price__description">
-          Комментарии
-        </div>
-      </div>
-
-      <div class="pagination">
-        <span class="pagination__item"></span>
+    <!-- <span class="pagination__item"></span>
         <span class="pagination__item  pagination__item--active"></span>
         <span class="pagination__item"></span>
-      </div>
+      </section> -->
 
-    </section>
+    <div class="wallop">
+      <section class="price price--active">
+        <div class="price__headline">
+          <h4 class="price__title">
+            Стандарт
+          </h4>
+          <p class="price__text">
+            3,99 usd
+          </p>
+        </div>
+
+        <div class="price__item">
+          <div class="price__description  price__description--yes">
+            <span>Розовый фильтр</span>
+          </div>
+          <div class="price__description  price__description--yes">
+            <span>Смайлики</span>
+          </div>
+          <div class="price__description  price__description--no">
+            <span>Комментарии</span>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="price__headline">
+          <h4 class="price__title">
+            Стандарт
+          </h4>
+          <p class="price__text">
+            3,99 usd
+          </p>
+        </div>
+
+        <div class="price__item">
+          <div class="price__description  price__description--yes">
+            <span>Розовый фильтр</span>
+          </div>
+          <div class="price__description  price__description--yes">
+            <span>Смайлики</span>
+          </div>
+          <div class="price__description  price__description--no">
+            <span>Комментарии</span>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="price__headline">
+          <h4 class="price__title">
+            Стандарт
+          </h4>
+          <p class="price__text">
+            3,99 usd
+          </p>
+        </div>
+
+        <div class="price__item">
+          <div class="price__description  price__description--yes">
+            <span>Розовый фильтр</span>
+          </div>
+          <div class="price__description  price__description--yes">
+            <span>Смайлики</span>
+          </div>
+          <div class="price__description  price__description--no">
+            <span>Комментарии</span>
+          </div>
+        </div>
+      </section>
+      <div class="pagination">
+        <button class="pagination__item"></button>
+        <button class="pagination__item  pagination__item--active"></button>
+        <button class="pagination__item"></button>
+      </div>
+    </div>
 
     <section class="contacts">
 
@@ -161,10 +264,14 @@
     </section>
 
     <div class="map">
-      <!-- iframe -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1448736962702"
+      width="320" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
   </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/Wallop.min.js"></script>
 
 </body>
 
