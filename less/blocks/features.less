@@ -1,0 +1,30 @@
+.features {
+  padding-top: 88px - 6; //minus line-height
+
+// padding-bottom: -42px;
+  color: @black;
+  background: @gray;
+  .container();
+  .wrapper();
+  .clearfix();
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: @font-size--h3;
+    font-weight: 700;
+    line-height: 24 / 18;
+  }
+  &__description {
+    margin: 0;
+    margin-top: 25px - 6 - 6; //minus line-height
+    margin-bottom: 43px - 6 - 6; //minus line-height
+    color: @dark-blue;
+    line-height: 24 / 14;
+  }
+  &__photo {
+    width: 160px;
+    height: 320px;
+    margin-top: 46px - 31px; //minus margin from features__description
+    padding: 0;
+  }
+}

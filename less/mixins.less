@@ -1,0 +1,35 @@
+.container() {
+  margin: 0 auto;
+  text-align: center;
+  @media @mobile {
+    width: 320px;
+  }
+
+  // @media @tablet {
+  //   width: 768px;
+  // }
+  // @media @desktop {
+  //   width: 1024px;
+  // }
+}
+.visuallyhidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.wrapper() {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.clearfix() {
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
