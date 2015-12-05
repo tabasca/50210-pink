@@ -1,10 +1,13 @@
-.photo-attach{
+.photo-attach {
   display: block;
   position: relative;
   overflow: hidden;
-  font-size: @font-size--h3;              /* example */
-  height: 63px;                 /* example */
-  line-height: 63px;             /* the same as height */
+  font-size: @font-size--h3;
+  /* example */
+  height: 63px;
+  /* example */
+  line-height: 63px;
+  /* the same as height */
   .clearfix();
   &__btn {
     float: right;
@@ -24,11 +27,12 @@
 .photo-attach .btn,
 .photo-attach > mark {
   display: block;
-  cursor: pointer;              /* example */
+  cursor: pointer;
+  /* example */
 }
-
 .photo-attach > mark {
-  background: transparent;     /* example */
+  background: transparent;
+  /* example */
   // padding-left: 1em            /* example */
 }
 .photo-attach .input[type=file] {
@@ -40,13 +44,11 @@
   height: 63px;
   cursor: pointer;
 }
-
 .photo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-
   padding-top: 36px * 2;
   &__item {
     position: relative;
@@ -59,7 +61,6 @@
     position: absolute;
     right: 15%;
     top: -15%;
-
     display: inline-block;
     vertical-align: middle;
     content: '';
@@ -102,5 +103,4 @@
     //   border-radius: 50%;
     // }
   }
-
 }

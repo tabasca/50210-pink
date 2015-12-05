@@ -4,7 +4,6 @@
   color: @vinous;
   line-height: 30 / 14;
   text-transform: uppercase;
-
   text-align: left;
   &--center {
     padding-left: 0;
@@ -15,7 +14,6 @@
     position: relative;
     padding-left: 60px;
     padding-top: 58px - (30 - 14); //minus line-height
-
     color: @dark-blue;
     text-transform: none;
   }
@@ -23,7 +21,6 @@
     position: absolute;
     left: 0;
     top: 55%;
-
     display: inline-block;
     vertical-align: middle;
     content: '';
@@ -38,7 +35,6 @@
     position: absolute;
     left: 0;
     top: 55%;
-
     display: inline-block;
     vertical-align: middle;
     content: '';
@@ -47,5 +43,21 @@
     background: @white;
     cursor: pointer;
     border: 2px solid #e6e6e6;
+  }
+  &--list::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    width: 60px - 2;
+    height: 60px - 4;
+    left: 0;
+    top: 17%;
+    background: @white;
+    border: 2px solid @light-gray;
+    border-right: none;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
   }
 }

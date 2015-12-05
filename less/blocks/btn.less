@@ -1,7 +1,6 @@
 .btn {
   display: inline-block;
   box-sizing: border-box;
-
   padding: 16px 0;
   margin-left: 20px;
   margin-right: 20px;
@@ -11,7 +10,7 @@
   color: @white;
   border: 3px solid @white;
   &--green {
-    padding: 25px - (30 - 18) 0; //minus line-height
+    padding: 0; //minus line-height
     line-height: 30 / 18;
     background: @green;
     text-transform: uppercase;
@@ -22,7 +21,6 @@
 .for-btns {
   position: relative;
 }
-
 .btn-minus,
 .btn-plus {
   position: absolute;
@@ -32,7 +30,6 @@
   background: @white;
   border-color: @light-gray;
   box-shadow: none;
-
 }
 .btn-minus {
   left: 0;
