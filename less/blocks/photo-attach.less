@@ -6,20 +6,27 @@
   height: 63px;                 /* example */
   line-height: 63px;             /* the same as height */
   .clearfix();
+  &__btn {
+    float: right;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px - 12 0; //minus line-height
+    line-height: 30 / 18;
+    width: 100%;
+    height: 100%;
+    background: @white;
+    color: @dark-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid @light-gray;
+  }
 }
 .photo-attach .btn,
 .photo-attach > mark {
   display: block;
   cursor: pointer;              /* example */
 }
-.photo-attach .btn{
-  float: right;
-  box-sizing: border-box;
-  // position: absolute;
-  width: 100%;
-  height: 100%;
 
-}
 .photo-attach > mark {
   background: transparent;     /* example */
   // padding-left: 1em            /* example */
@@ -32,7 +39,6 @@
   opacity: 0;
   height: 63px;
   cursor: pointer;
-
 }
 
 .photo {
@@ -40,14 +46,61 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
 
-.photo img {
-  padding-right: 35px;
-  padding-bottom: 35px;
-  width: 68px;
-  height: 68px;
-  &:nth-child(3n) {
-    padding-right: 0;
+  padding-top: 36px * 2;
+  &__item {
+    position: relative;
+    padding-right: 35px;
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
   }
+  &__del {
+    position: absolute;
+    right: 15%;
+    top: -15%;
+
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 38px - 4; //minus border
+    height: 38px - 4; //minus border
+    background: @white;
+    cursor: pointer;
+    border: 2px solid #e6e6e6;
+    border-radius: 50%;
+    &--padding {
+      right: -25%;
+    }
+  }
+  &__name {
+    position: absolute;
+    bottom: 23%;
+    left: 0;
+    font-size: 12px;
+    line-height: 18 / 12;
+    text-transform: uppercase;
+  }
+  &__img {
+    padding-bottom: 46px;
+    width: 68px;
+    height: 68px;
+
+    // &:after {
+    //   position: absolute;
+    //   right: 0;
+    //   top: -50%;
+    //
+    //   display: inline-block;
+    //   vertical-align: middle;
+    //   content: '';
+    //   width: 38px - 4; //minus border
+    //   height: 38px - 4; //minus border
+    //   background: @white;
+    //   cursor: pointer;
+    //   border: 2px solid #e6e6e6;
+    //   border-radius: 50%;
+    // }
+  }
+
 }

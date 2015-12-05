@@ -1,9 +1,42 @@
 .btn {
   display: inline-block;
-  padding: 16px 38px;
+  box-sizing: border-box;
+
+  padding: 16px 0;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: @font-size--h3;
   line-height: 18 / 18;
   font-weight: 700;
   color: @white;
   border: 3px solid @white;
+  &--green {
+    padding: 25px - (30 - 18) 0; //minus line-height
+    line-height: 30 / 18;
+    background: @green;
+    text-transform: uppercase;
+    border-color: @gray;
+  }
+  .container();
+}
+.for-btns {
+  position: relative;
+}
+
+.btn-minus,
+.btn-plus {
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  top: 0;
+  background: @white;
+  border-color: @light-gray;
+  box-shadow: none;
+
+}
+.btn-minus {
+  left: 0;
+}
+.btn-plus {
+  right: 0;
 }

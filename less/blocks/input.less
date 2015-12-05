@@ -1,0 +1,33 @@
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 24px;
+  padding-top: 23px - (30 - 18); //minus line-height
+  padding-bottom: 23px - (30 - 18); //minus line-height
+  font-size: @font-size--h3;
+  line-height: 30 / 18;
+  border: 2px solid @light-gray;
+  color: @dark-blue;
+
+  &--checkbox {
+    display: none;
+    &:checked + .label:before {
+      text-align: center;
+
+      content: '\2713';
+      color: @vinous;
+    }
+  }
+  &--radio {
+    display: none;
+    &:checked + .label:before {
+      text-align: center;
+      content: '\25CF';
+      color: @vinous;
+    }
+  }
+  &--center {
+    padding-left: 0;
+    text-align: center;
+  }
+}

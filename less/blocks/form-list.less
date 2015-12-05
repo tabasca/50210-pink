@@ -1,0 +1,42 @@
+.form-list {
+  list-style-position: outside;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &__item {
+    position: relative;
+  }
+  &__item .input {
+    margin-left: 60px;
+    width: 220px;
+  }
+  &__text {
+    display: inline-block;
+    width: 60px;
+    color: @vinous;
+    text-align: center;
+    &--no {
+      visibility: hidden;
+    }
+  }
+}
+
+.label--list::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    width: 60px - 2;
+    height: 60px - 4;
+    left: 0;
+    top: 17%;
+    background: @white;
+
+
+    border: 2px solid @light-gray;
+    border-right: none;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    transition: all .3s ease-out;
+}
