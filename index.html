@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,700italic,300italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/wallop/wallop.css">
+  <link rel="stylesheet" href="css/flickity.css" media="screen">
 </head>
 
 <body class="page">
@@ -38,21 +39,23 @@
       <h1 class="intro__title">
         Взгляните на жизнь иначе!
       </h1>
-      <a class="btn  intro__btn" href="#">Скачать приложение</a>
-      <div class="platform">
-        <a class="platform__link  platform__link--apple" href="#">
-          <img src="img/apple-logo.png" alt="iphone">
-        </a>
-        <a class="platform__link  platform__link--android" href="#">
-          <img src="img/android-logo.png" alt="android">
-        </a>
-        <a class="platform__link  platform__link--microsoft" href="#">
-          <img src="img/microsoft-logo.png" alt="microsoft">
-        </a>
+      <div class="intro__content">
+        <a class="btn  intro__btn" href="#">Скачать приложение</a>
+        <div class="platform">
+          <a class="platform__link  platform__link--apple" href="#">
+            <img src="img/apple-logo.png" alt="iphone">
+          </a>
+          <a class="platform__link  platform__link--android" href="#">
+            <img src="img/android-logo.png" alt="android">
+          </a>
+          <a class="platform__link  platform__link--microsoft" href="#">
+            <img src="img/microsoft-logo.png" alt="microsoft">
+          </a>
+        </div>
+        <p class="intro__text">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
       </div>
-      <p class="intro__text">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </p>
     </section>
 
     <div class="intro intro--sub">
@@ -97,8 +100,7 @@
 
     </div>
 
-    <!-- <section class="reviews">
-
+    <section class="slider  js-flickity">
       <blockquote class="quote">
         <div class="quote__title">
           <cite class="quote__cite">
@@ -108,61 +110,33 @@
         <p class="quote__text">
           &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
         </p>
-      </blockquote> -->
-    <section class="slider slider--reviews">
-      <input class="slider__input" type="radio" id="btn-1" name="toggle" checked>
-      <input class="slider__input" type="radio" id="btn-2" name="toggle">
-      <input class="slider__input" type="radio" id="btn-3" name="toggle">
-      <div class="slider__controls">
-        <label class="slider__label" for="btn-1"></label>
-        <label class="slider__label" for="btn-2"></label>
-        <label class="slider__label" for="btn-3"></label>
-      </div>
-      <div class="slider__inner">
-        <div class="slider__slides">
-          <blockquote class="quote">
-            <div class="quote__title">
-              <cite class="quote__cite">
-                Николай Петров
-              </cite>
-            </div>
-            <p class="quote__text">
-              &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
-            </p>
-          </blockquote>
-          <blockquote class="quote">
-            <div class="quote__title">
-              <cite class="quote__cite">
-                N/A
-              </cite>
-            </div>
-            <p class="quote__text">
-              &#171;N/A&#187;
-            </p>
-          </blockquote>
-          <blockquote class="quote">
-            <div class="quote__title">
-              <cite class="quote__cite">
-                N/A
-              </cite>
-            </div>
-            <p class="quote__text">
-              &#171;N/A&#187;
-            </p>
-          </blockquote>
+      </blockquote>
+      <blockquote class="quote">
+        <div class="quote__title">
+          <cite class="quote__cite">
+            N/A
+          </cite>
         </div>
-      </div>
+        <p class="quote__text">
+          &#171;N/A&#187;
+        </p>
+      </blockquote>
+      <blockquote class="quote">
+        <div class="quote__title">
+          <cite class="quote__cite">
+            N/A
+          </cite>
+        </div>
+        <p class="quote__text">
+          &#171;N/A&#187;
+        </p>
+      </blockquote>
 
     </section>
 
-    <!-- <span class="pagination__item"></span>
-        <span class="pagination__item  pagination__item--active"></span>
-        <span class="pagination__item"></span>
-      </section> -->
-
-    <div class="wallop">
-      <section class="price price--active">
-        <div class="price__headline">
+    <div class="slider  js-flickity">
+      <section class="price  price--active">
+        <div class="price__headline  price__headline--hit">
           <h4 class="price__title">
             Стандарт
           </h4>
@@ -227,11 +201,11 @@
           </div>
         </div>
       </section>
-      <div class="pagination">
+      <!-- <div class="pagination">
         <button class="pagination__item"></button>
         <button class="pagination__item  pagination__item--active"></button>
         <button class="pagination__item"></button>
-      </div>
+      </div> -->
     </div>
 
     <section class="contacts">
@@ -269,8 +243,8 @@
     </div>
 
   </main>
-  <!-- <script src="js/script.js"></script>
-  <script src="js/Wallop.min.js"></script> -->
+  <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/menu.js"></script>
 
 </body>
 

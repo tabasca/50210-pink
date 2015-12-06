@@ -1,17 +1,18 @@
 .intro {
   position: relative;
   background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
-  background-size: auto;
+  background-size: cover;
   .container();
-
-  // .wrapper();
+  &__content {
+    background: @dark-blue;
+  }
   &--sub {
     margin-bottom: 70px - 2; //minus line-height
     background: @white;
   }
   &--inner {
-    background: @dark-blue url(../img/inner_top.jpg) no-repeat center top;
-    background-size: auto;
+    background: @dark-blue url(../img/inner_top.jpg) no-repeat;
+    background-size: cover;
   }
   &__description {
     padding-top: 57px - 16; //minus line-height

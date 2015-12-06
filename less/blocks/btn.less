@@ -1,5 +1,6 @@
 .btn {
   display: inline-block;
+  width: 100% - 6.25%; //minus paddings
   box-sizing: border-box;
   padding: 16px 0;
   margin-left: 20px;
@@ -10,30 +11,12 @@
   color: @white;
   border: 3px solid @white;
   &--green {
-    padding: 0; //minus line-height
+    width: 100% - 6.25%; //minus paddings
+    padding: 25px - (30 - 18); //minus line-height
     line-height: 30 / 18;
     background: @green;
     text-transform: uppercase;
-    border-color: @gray;
+    border: none;
   }
   .container();
-}
-.for-btns {
-  position: relative;
-}
-.btn-minus,
-.btn-plus {
-  position: absolute;
-  width: 60px;
-  height: 100%;
-  top: 0;
-  background: @white;
-  border-color: @light-gray;
-  box-shadow: none;
-}
-.btn-minus {
-  left: 0;
-}
-.btn-plus {
-  right: 0;
 }

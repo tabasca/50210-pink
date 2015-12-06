@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,700italic,300italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
@@ -46,28 +47,34 @@
     <form class="form">
 
       <fieldset class="form__item  form__item--bg_white">
-        <label class="label  label" for="name">имя: *</label>
-        <input class="input  input" type="text" id="name" name="name" value="Введите ваше имя" required>
+        <label class="label" for="name">имя: *</label>
+        <input class="input" type="text" id="name" name="name" value="Введите ваше имя" required>
 
-        <label class="label  label" for="surname">фамилия: *</label>
-        <input class="input  input" type="text" id="surname" name="surname" value="Укажите фамилию" required>
+        <label class="label" for="surname">фамилия: *</label>
+        <input class="input" type="text" id="surname" name="surname" value="Укажите фамилию" required>
 
-        <label class="label  label" for="second-name">отчество: </label>
-        <input class="input  input" type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
+        <label class="label" for="second-name">отчество: </label>
+        <input class="input" type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
       </fieldset>
 
       <fieldset class="form__item  form__item--bg_gray">
         <legend class="form__title">
           С каким приложением путешествовали? *
         </legend>
-        <input class="input  input--radio" type="radio" id="ios" name="ios" value="iOS" checked required>
-        <label class="label  label--radio" for="ios">Pink для iOS</label>
+        <label class="form__radio  radio" for="ios">
+          <input class="radio__input" type="radio" id="ios" name="ios" value="iOS" checked required>
+          <span class="radio__indicator"></span>Pink для iOS
+        </label>
 
-        <input class="input  input--radio" type="radio" id="android" name="android" value="Android" required>
-        <label class="label  label--radio" for="android">Pink для Android</label>
+        <label class="form__radio  radio" for="ios">
+          <input class="radio__input" type="radio" id="android" name="android" value="Android" checked required>
+          <span class="radio__indicator"></span>Pink для Android
+        </label>
 
-        <input class="input  input--radio" type="radio" id="windows-phone" name="windows-phone" value="Windows Phone" required>
-        <label class="label  label--radio" for="windows-phone">Windows Phone</label>
+        <label class="form__radio  radio" for="ios">
+          <input class="radio__input" type="radio" id="windows-phone" name="windows-phone" value="Windows Phone" checked required>
+          <span class="radio__indicator"></span>Windows Phone
+        </label>
       </fieldset>
 
       <fieldset class="form__item  form__item--bg_white">
@@ -77,10 +84,10 @@
         <input class="input" type="text" id="departure" name="departure" value="1 апреля 2015" required>
         <label class="label  label--center" for="departure">Дата выезда</label>
 
-        <div class="for-btns">
-          <button class="btn-plus" type="button" name="btn-plus" value="+">+</button>
-          <input class="input  input--center" type="text" id="duration" name="duration" value="10 дней" required>
-          <button class="btn-minus" type="button" name="btn-minus" value="-">-</button>
+        <div class="plus-minus">
+          <button class="plus-minus__btn" type="button" name="btn-minus" value="-">-</button>
+          <input class="input  plus-minus__input" type="text" id="duration" name="duration" value="10 дней" required>
+          <button class="plus-minus__btn" type="button" name="btn-plus" value="+">+</button>
         </div>
 
         <label class="label  label--center" for="duration">Продолжительность</label>
@@ -94,33 +101,27 @@
           Количество попутчиков *
         </legend>
 
-        <div class="for-btns">
-
-          <button class="btn-plus" type="button" name="btn-plus" value="+">+</button>
-          <input class="input  input--center" type="text" id="companions" name="companions" value="2 чел" required>
-          <button class="btn-minus" type="button" name="btn-minus" value="-">-</button>
-
+        <div class="plus-minus">
+          <button class="plus-minus__btn" type="button" name="btn-minus" value="-">-</button>
+          <input class="input  plus-minus__input" type="text" id="companions" name="companions" value="2 чел" required>
+          <button class="plus-minus__btn" type="button" name="btn-plus" value="+">+</button>
         </div>
 
         <ol class="form-list">
           <li class="form-list__item">
-            <span class="form-list__text">№</span>
-            <label class="label  label--list" for="list-name">Имя *</label>
-            <input class="input  input--list" type="text" id="list-name" name="name" value="Введите ваше имя" required>
+            <label class="label  form-list__label" for="list-name">Имя *</label>
+            <input class="input  form-list__input" type="text" id="list-name" name="name" value="Введите ваше имя" required>
 
-            <span class="form-list__text  form-list__text--no">№</span>
-            <label class="label" for="list-nickname">Прозвище</label>
-            <input class="input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
+            <label class="label  form-list__label" for="list-nickname">Прозвище</label>
+            <input class="input  form-list__input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
           </li>
 
           <li class="form-list__item">
-            <span class="form-list__text">№</span>
-            <label class="label  label--list" for="list-name">Имя *</label>
-            <input class="input  input-list" type="text" id="list-name" name="name" value="Введите ваше имя" required>
+            <label class="label  form-list__label" for="list-name">Имя *</label>
+            <input class="input  form-list__input" type="text" id="list-name" name="name" value="Введите ваше имя" required>
 
-            <span class="form-list__text  form-list__text--no">№</span>
-            <label class="label" for="list-nickname">Прозвище</label>
-            <input class="input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
+            <label class="label  form-list__label" for="list-nickname">Прозвище</label>
+            <input class="input  form-list__input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
           </li>
         </ol>
 
@@ -130,23 +131,36 @@
         <legend class="form__title">
           Ваши безбашенные достижения в путешествии
         </legend>
-        <input class="input  input--checkbox" type="checkbox" id="shark" name="shark" value="selfie-shark" checked>
-        <label class="label  label--checkbox" for="shark">Сделал селфи с акулой</label>
 
-        <input class="input  input--checkbox" type="checkbox" id="sunburned" name="sunburned" value="sunburned" checked>
-        <label class="label  label--checkbox" for="sunburned">Обгорел на пляже</label>
+        <label class="form__checkbox  checkbox" for="shark">
+          <input class="checkbox__input" type="checkbox" id="shark" name="shark" value="selfie-shark" checked>
+          <span class="checkbox__indicator"></span>Сделал селфи с акулой
+        </label>
 
-        <input class="input  input--checkbox" type="checkbox" id="chak_norris" name="chak_norris" value="chak_norris">
-        <label class="label  label--checkbox" for="chak_norris">Видел Чака Норриса</label>
+        <label class="form__checkbox  checkbox" for="sunburned">
+          <input class="checkbox__input" type="checkbox" id="sunburned" name="sunburned" value="sunburned" checked>
+          <span class="checkbox__indicator"></span>Обгорел на пляже
+        </label>
 
-        <input class="input  input--checkbox" type="checkbox" id="souvenirs" name="souvenirs" value="souvenirs">
-        <label class="label  label--checkbox" for="souvenirs">Накупил сувениров</label>
+        <label class="form__checkbox  checkbox" for="chak_norris">
+          <input class="checkbox__input" type="checkbox" id="chak_norris" name="chak_norris" value="chak_norris">
+          <span class="checkbox__indicator"></span>Видел Чака Норриса
+        </label>
 
-        <input class="input  input--checkbox" type="checkbox" id="tower" name="tower" value="tower" checked>
-        <label class="label  label--checkbox" for="tower">Удержал башню</label>
+        <label class="form__checkbox  checkbox" for="souvenirs">
+          <input class="checkbox__input" type="checkbox" id="souvenirs" name="souvenirs" value="souvenirs">
+          <span class="checkbox__indicator"></span>Накупил сувениров
+        </label>
 
-        <input class="input  input--checkbox" type="checkbox" id="hotel" name="hotel" value="hotel" checked>
-        <label class="label  label--checkbox" for="hotel">Разгромил отель</label>
+        <label class="form__checkbox  checkbox" for="tower">
+          <input class="checkbox__input" type="checkbox" id="tower" name="tower" value="tower" checked>
+          <span class="checkbox__indicator"></span>Удержал башню
+        </label>
+
+        <label class="form__checkbox  checkbox" for="hotel">
+          <input class="checkbox__input" type="checkbox" id="hotel" name="hotel" value="hotel" checked>
+          <span class="checkbox__indicator"></span>Разгромил отель
+        </label>
       </fieldset>
 
       <fieldset class="form__item  form__item--bg_gray">
@@ -212,7 +226,7 @@
       <div class="form__btn">
         <input class="btn  btn--green" type="submit" value="Отправить форму">
         <p class="text">
-          <span class="text  text--pink">*</span> - обязательные поля</p>
+          <span class="text__decor  text__decor--pink">*</span> - обязательные поля</p>
       </div>
 
     </form>
@@ -283,6 +297,7 @@
 
   </footer>
 
+  <script src="js/menu.js"></script>
 
 </body>
 
