@@ -1,3 +1,34 @@
 .main-nav {
-  .visuallyhidden()
+  // .visuallyhidden()
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__item > .link {
+    display: block;
+    padding: 26px - (32 - 18) 0; //minus line-height
+    border-bottom: 1px solid black;
+    border-top: 1px solid #495461;
+    background: @dark-blue;
+    font-size: 18px;
+    line-height: 32 / 18;
+    font-weight: 700;
+    text-align: center;
+    color: @white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+.js-menu .page-header__btn-menu {
+  background: url(../img/menu-btn.png) no-repeat center center;
+}
+.js-menu .main-nav {
+  display: none;
+}
+.js-menu--open .main-nav {
+  display: block;
+}
+.js-menu--open .page-header__btn-menu {
+  background: url(../img/close-menu-btn.png) no-repeat center center;
 }

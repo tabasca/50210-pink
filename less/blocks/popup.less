@@ -1,0 +1,35 @@
+.popup {
+  padding-top: 45px - (24 - 18); //minus line-height
+  overflow: hidden;
+  .container();
+  .clearfix();
+  &__text {
+    .wrapper();
+    padding-bottom: 37px - 10; // minus line-height
+  }
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 24 / 18;
+    font-weight: 700;
+  }
+  &__description {
+    padding: 0;
+    padding-top: 37px - 10 - 6; // minus line-height
+    padding-bottom: 37px - 10; // minus line-height
+    margin: 0;
+    font-size: 14px;
+    line-height: 24 / 14;
+    font-weight: 400;
+  }
+  &__btn {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background: @gray;
+    &--white_bg {
+      padding-top: 0;
+      background: @white;
+    }
+  }
+}

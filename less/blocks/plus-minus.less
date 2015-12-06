@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+.plus-minus {
+  border: 2px solid @light-gray;
+  font-size: 0;
+  width: 100%;
+  &__btn {
+    color: #283645;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    width: 60% / 280% * 100; //width according to the psd model
+    height: 59px;
+    display: inline-block;
+    border: 0;
+    background: transparent;
+  }
+  &__input {
+    width: 100% - 21.42857143% * 2; //minus width of btns
+    height: 59px;
+    padding-left: 0;
+    border: 0;
+    border-left: 2px solid @light-gray;
+    border-right: 2px solid @light-gray;
+    text-align: center;
+  }
+}

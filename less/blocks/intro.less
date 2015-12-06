@@ -1,11 +1,26 @@
 .intro {
   position: relative;
   background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
-  background-size: auto;
+  background-size: cover;
   .container();
+  &__content {
+    background: @dark-blue;
+  }
   &--sub {
     margin-bottom: 70px - 2; //minus line-height
     background: @white;
+  }
+  &--inner {
+    background: @dark-blue url(../img/inner_top.jpg) no-repeat;
+    background-size: cover;
+  }
+  &__description {
+    padding-top: 57px - 16; //minus line-height
+    font-size: @font-size;
+    line-height: 30 / 14;
+    background: @white;
+
+    // .wrapper();
   }
   &__title {
     margin: 0;
@@ -15,6 +30,9 @@
     font-weight: 300;
     line-height: 28 / 24;
     color: @white;
+    &--inner {
+      padding-bottom: 59px - 4; //minus line-height
+    }
     &--gray {
       padding-top: 46px - 2px; //minus line-height
       padding-bottom: 0;

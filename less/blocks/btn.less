@@ -1,9 +1,22 @@
 .btn {
   display: inline-block;
-  padding: 16px 38px;
+  width: 100% - 6.25%; //minus paddings
+  box-sizing: border-box;
+  padding: 16px 0;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: @font-size--h3;
   line-height: 18 / 18;
   font-weight: 700;
   color: @white;
   border: 3px solid @white;
+  &--green {
+    width: 100% - 6.25%; //minus paddings
+    padding: 25px - (30 - 18); //minus line-height
+    line-height: 30 / 18;
+    background: @green;
+    text-transform: uppercase;
+    border: none;
+  }
+  .container();
 }
