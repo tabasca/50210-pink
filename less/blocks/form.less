@@ -32,7 +32,34 @@
   &__btn {
     margin-top: 50px;
     padding-bottom: 50px;
+  }
+}
 
-    // .wrapper();
+//tablet version
+
+@media @tablet {
+  .form {
+    &__item {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 64px - (30 - 18); //minus line-height
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 66px;
+      border: 2px solid @light-gray;
+      background: @white;
+      &:first-child {
+        padding-bottom: 0;
+        border: none;
+      }
+    }
+    &__title {
+      margin-left: 126 / 620 * 100%;
+      margin-right: 126 / 620 * 100%;
+      width: 100% - 20.32258065% * 2;
+      top: -3.3%;
+      background: @white;
+
+    }
   }
 }
