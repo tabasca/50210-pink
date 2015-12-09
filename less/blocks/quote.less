@@ -3,7 +3,11 @@
   margin: 0;
   margin-top: 50px - 12px; //minus line-height
   .wrapper();
+  // &__sign {
+  //   // .visuallyhidden();
+  // }
   &__title {
+    margin-bottom: 40px;
     font-size: @font-size--h3;
     line-height: 30 / 18;
   }
@@ -14,5 +18,32 @@
   }
   &__text {
     line-height: 30 / 14;
+  }
+}
+
+//mobile version
+
+@media @mobile {
+  .quote {
+    &__sign {
+      .visuallyhidden();
+    }
+  }
+}
+
+@media @tablet {
+  .quote {
+    display: flex;
+    flex-direction: column-reverse;
+    &__text {
+      font-size: @font-size--h3;
+      line-height: 30 / 18;
+    }
+    &__sign {
+      margin: 0;
+      font-size: 14px;
+      line-height: 30 / 14;
+
+    }
   }
 }

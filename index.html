@@ -43,13 +43,13 @@
         <a class="btn  intro__btn" href="#">Скачать приложение</a>
         <div class="platform">
           <a class="platform__link  platform__link--apple" href="#">
-            <img src="img/apple-logo.png" alt="iphone">
+            <img src="img/apple-logo.png" width="46px" height="46px" alt="iphone">
           </a>
           <a class="platform__link  platform__link--android" href="#">
-            <img src="img/android-logo.png" alt="android">
+            <img src="img/android-logo.png" width="46px" height="46px" alt="android">
           </a>
           <a class="platform__link  platform__link--microsoft" href="#">
-            <img src="img/microsoft-logo.png" alt="microsoft">
+            <img src="img/microsoft-logo.png" width="46px" height="46px" alt="microsoft">
           </a>
         </div>
         <p class="intro__text">
@@ -69,6 +69,7 @@
 
     <div class="features">
 
+      <img class="features__photo" src="img/iphone.png" width="270px" alt="">
       <section class="features__item">
         <h3 class="features__title">
           Поднимает настроение
@@ -95,10 +96,23 @@
           Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
         </p>
       </section>
+    </div>
 
-      <img src="img/iphone.png" alt="" class="features__photo">
+    <div class="features  features--tablet">
+
+      <img class="features__photo  features__photo--tablet" src="img/iphone.png" width="270px" alt="">
+      <section class="features__item">
+        <h3 class="features__title  features__title--tablet">
+          Эффект на 24 часа!
+        </h3>
+        <p class="features__description">
+          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+        </p>
+        <a href="" class="features__link">Узнать больше об исследовании</a>
+      </section>
 
     </div>
+
 
     <section class="slider  js-flickity">
       <blockquote class="quote">
@@ -106,6 +120,7 @@
           <cite class="quote__cite">
             Николай Петров
           </cite>
+          <p class="quote__sign">25 лет, водитель трамвая</p>
         </div>
         <p class="quote__text">
           &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
@@ -134,7 +149,7 @@
 
     </section>
 
-    <div class="slider  js-flickity">
+    <div class="slider  js-flickity  slider--tablet">
       <section class="price  price--active">
         <div class="price__headline  price__headline--hit">
           <h4 class="price__title">
@@ -214,35 +229,66 @@
         Остались вопросы? Свяжитесь с нами!
       </h2>
 
-      <h3 class="contacts__title">
-        Звоните:
-      </h3>
-      <p class="contacts__text">
-        +7 (812) 555-66-66
-      </p>
+      <div>
+        <h3 class="contacts__title">
+          Звоните:
+        </h3>
+        <p class="contacts__text">
+          +7 (812) 555-66-66
+        </p>
+      </div>
 
-      <h3 class="contacts__title">
-        Пишите:
-      </h3>
-      <p class="contacts__text">
-        mail@htmlacademy.ru
-      </p>
+      <div>
+        <h3 class="contacts__title">
+          Пишите:
+        </h3>
+        <p class="contacts__text">
+          mail@htmlacademy.ru
+        </p>
+      </div>
 
-      <h3 class="contacts__title">
-        Приезжайте в гости:
-      </h3>
-      <p class="contacts__text">
-        ул. Большая Конюшенная, 19/8
-      </p>
+      <div>
+        <h3 class="contacts__title">
+          Приезжайте в гости:
+        </h3>
+        <p class="contacts__text">
+          ул. Большая Конюшенная, 19/8
+        </p>
+      </div>
 
     </section>
 
     <div class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1448736962702"
-      width="320" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+      frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
   </main>
+
+  <footer class="page-footer  page-footer--hidden">
+
+    <section class="page-footer__logo">
+      <p class="text">
+        <a class="page-footer__logo-link" href="#"></a>
+      </p>
+    </section>
+
+    <section class="social">
+      <p class="text">
+        <a class="social__link" href="#">VKontakte</a>
+        <a class="social__link" href="#">Facebook</a>
+        <a class="social__link" href="#">YouTube</a>
+      </p>
+    </section>
+
+    <section class="copyright">
+      <p class="text">разработано
+        <a class="copyright__logo" href="#"></a>
+      </p>
+    </section>
+
+  </footer>
+
   <script src="js/flickity.pkgd.min.js"></script>
   <script src="js/menu.js"></script>
 
