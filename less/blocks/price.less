@@ -53,11 +53,26 @@
 // tablet version
 
 @media @tablet {
+  .slider--tablet {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+  }
   .price {
-    width: 25.8%;
+    width: 25%;
+    // &:first-child::before {
+    //   content: 'olol';
+    // }
+    &__item {
+      position: absolute;
+      left: 0;
+    }
+    flex: 1 0 25%;
     padding: 0;
-    position: absolute;
-    left: 50%;
+    // width: 25.8%;
+    // padding: 0;
+    // position: absolute;
+    // left: 50%;
     // display: flex;
     // flex-direction: row-reverse;
     // &__headline {
