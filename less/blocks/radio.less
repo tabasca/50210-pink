@@ -23,9 +23,21 @@
     // &:focus ~ .radio__indicator{
     //   box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
     // }
-    &:checked ~ .radio__indicator {
-      color: @vinous;
-      background-color: @white;
+    &:checked ~ .radio__indicator:before {
+      display: inline-block;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      vertical-align: middle;
+      content: '';
+      width: 15px;
+      height: 15px;
+      background: @vinous;
+      cursor: pointer;
+      border-radius: 50%;
     }
     &:active ~ .radio__indicator {
       color: #fff;
@@ -49,17 +61,17 @@
 }
 
 // tablet version
-
 @media @tablet {
   .form__radio {
     &:first-of-type {
       margin-top: 0;
     }
   }
-//   .radio {
-//     padding-left: 80px;
-//     &__indicator {
-//       left: 5%;
-//     }
-//   }
+
+  //   .radio {
+  //     padding-left: 80px;
+  //     &__indicator {
+  //       left: 5%;
+  //     }
+  //   }
 }

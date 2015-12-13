@@ -23,14 +23,30 @@
     // &:focus ~ .radio__indicator{
     //   box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
     // }
-    &:checked ~ .checkbox__indicator {
-      color: @vinous;
-      background-color: @white;
+    &:checked ~ .checkbox__indicator:before {
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      left: 0;
+      top: -30%;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      content: '';
+      width: 18px;
+      height: 8px;
+      background: @white;
+      cursor: pointer;
+      border: 2px solid @vinous;
+      border-top: none;
+      border-right: none;
+      border-radius: 2px;
+      transform: rotate(-45deg);
     }
-    &:active ~ .checkbox__indicator {
-      color: #fff;
-      background-color: @white;
-    }
+    // &:active ~ .checkbox__indicator {
+    //   color: @vinous;
+    //   background-color: @white;
+    // }
   }
   &__indicator {
     position: absolute;

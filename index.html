@@ -36,9 +36,11 @@
   <main class="main-section">
 
     <section class="intro">
-      <h1 class="intro__title">
-        Взгляните на жизнь иначе!
-      </h1>
+      <div class="intro__box">
+        <h1 class="intro__title">
+          Взгляните на жизнь иначе!
+        </h1>
+      </div>
       <div class="intro__content">
         <a class="btn  intro__btn" href="#">Скачать приложение</a>
         <div class="platform">
@@ -149,7 +151,83 @@
 
     </section>
 
-    <div class="slider  slider--tablet">
+    <div class="slider  js-flickity  slider--tablet">
+      <table class="price">
+        <tr class="price__row">
+          <td class="price__headline  price__headline--hidden">
+            <h4 class="price__title">
+              Стандарт
+            </h4>
+            <p class="price__text">
+              3,99 usd
+            </p>
+          </td>
+          <td class="price__headline">
+            <h4 class="price__title">
+              База
+            </h4>
+            <p class="price__text">
+              1,99 usd
+            </p>
+          </td>
+          <td class="price__headline">
+            <h4 class="price__title  price__title--hit">
+              Стандарт
+            </h4>
+            <p class="price__text">
+              3,99 usd
+            </p>
+          </td>
+          <td class="price__headline">
+            <h4 class="price__title">
+              Анлим
+            </h4>
+            <p class="price__text">
+              9,99 usd
+            </p>
+          </td>
+        </tr>
+        <tr class="price__row">
+          <td class="price__description  price__description--hidden">Розовый фильтр</td>
+          <td class="price__description  price__description--yes">Розовый фильтр</td>
+          <td class="price__description  price__description--yes">Розовый фильтр</td>
+          <td class="price__description  price__description--yes">Розовый фильтр</td>
+        </tr>
+        <tr class="price__row">
+          <td class="price__description  price__description--hidden">Смайлики</td>
+          <td class="price__description  price__description--no">Смайлики</td>
+          <td class="price__description  price__description--no">Смайлики</td>
+          <td class="price__description  price__description--yes">Смайлики</td>
+        </tr>
+        <tr class="price__row">
+          <td class="price__description  price__description--hidden">Комментарии</td>
+          <td class="price__description  price__description--no">Комментарии</td>
+          <td class="price__description  price__description--no">Комментарии</td>
+          <td class="price__description  price__description--no">Комментарии</td>
+        </tr>
+      </table>
+      <!-- <section class="price  price--hidden">
+        <div class="price__headline  price__headline--hidden">
+          <h4 class="price__title">
+            Стандарт
+          </h4>
+          <p class="price__text">
+            3,99 usd
+          </p>
+        </div>
+
+        <div class="price__item">
+          <div class="price__description  price__description--yes">
+            <span>Розовый фильтр</span>
+          </div>
+          <div class="price__description  price__description--yes">
+            <span>Смайлики</span>
+          </div>
+          <div class="price__description  price__description--no">
+            <span>Комментарии</span>
+          </div>
+        </div>
+      </section>
       <section class="price  price--active">
         <div class="price__headline  price__headline--hit">
           <h4 class="price__title">
@@ -215,7 +293,7 @@
             <span>Комментарии</span>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- <div class="pagination">
         <button class="pagination__item"></button>
         <button class="pagination__item  pagination__item--active"></button>
@@ -282,7 +360,7 @@
     </section>
 
     <section class="copyright">
-      <p class="text">разработано
+      <p class="copyright__text">Разработано
         <a class="copyright__logo" href="#"></a>
       </p>
     </section>

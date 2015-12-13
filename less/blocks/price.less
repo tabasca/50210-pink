@@ -1,17 +1,28 @@
 .price {
-  width: 100%; //minus borders
-  padding-top: 68px;
-  padding-bottom: 100px;
-  text-transform: uppercase;
-  background: @gray;
-  .container();
-  .wrapper();
+  width: 100%;
+  &__row {
+    width: 100%;
+    padding-top: 68px;
+    padding-bottom: 100px;
+    border: 2px solid @light-gray;
+
+    text-transform: uppercase;
+    border-collapse: collapse;
+    background: @gray;
+    .container();
+    .wrapper();
+  }
   &__headline {
     position: relative;
     padding: 25px - 5 0; //minus line-height
     color: @white;
     background: @dark-blue;
-    border: 2px solid @light-gray;
+    border: none;
+    border-right: 2px solid @light-gray;
+    &:last-child {
+      border-right: none;
+    }
+
     border-bottom: none;
     line-height: 30 / 18;
     &--hit::before {
@@ -22,7 +33,6 @@
       background: url(../img/hit.png) no-repeat 0 0;
       top: 0;
       left: 0;
-
     }
   }
   &__title {
@@ -37,7 +47,7 @@
   &__description {
     padding: 20px 0;
     padding-left: 24px;
-    border: 2px solid @light-gray;
+    border-right: 2px solid @light-gray;
     border-top: none;
     background: @white;
     text-align: left;
@@ -50,43 +60,55 @@
   }
 }
 
+//mobile version
+
+@media @mobile {
+  .price {
+    &__description {
+      &--hidden {
+      .visuallyhidden();
+      }
+    }
+    &__headline {
+      &--hidden {
+        .visuallyhidden();
+      }
+    }
+  }
+}
+
+
 // tablet version
 
 @media @tablet {
   .slider--tablet {
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
+    padding-top: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: @gray;
   }
   .price {
-    width: 25%;
-    // &:first-child::before {
-    //   content: 'olol';
-    // }
-    &__item {
-      position: absolute;
-      left: 0;
+    &__row {
+      padding: 0;
     }
-    flex: 1 0 25%;
-    padding: 0;
-    // width: 25.8%;
-    // padding: 0;
-    // position: absolute;
-    // left: 50%;
-    // display: flex;
-    // flex-direction: row-reverse;
-    // &__headline {
-    //   border-right: none;
-    //   &:first-child {
-    //     border-left: none;
-    //   }
-    // }
-    // &__description {
-    //   border-right: none;
-    // }
+    &__headline {
+      width: 25%;
+      font-size: 16px;
+      line-height: 30 / 16;
+      &--hidden {
+        border: none;
+        visibility: hidden;
+      }
     }
-  .slider--tablet {
-    position: relative;
-    width: 100%;
+    &__text {
+      font-size: 18px;
+      line-height: 30 / 18;
+    }
+    &__description {
+      width: 25%;
+      padding-left: 18px - 2; //minus border
+      text-transform: none;
+      line-height: 30 / 14;
+    }
   }
-  }
+}

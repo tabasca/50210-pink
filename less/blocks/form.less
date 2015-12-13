@@ -22,12 +22,13 @@
   }
   &__title {
     position: absolute;
-    top: 40px;
-    left: 45%;
-    // width: 100%;
+    top: 2em;
+    left: 50%;
+    margin: 0 auto;
     color: @vinous;
     text-transform: uppercase;
     line-height: 18 / 14;
+    transform: translateX(-50%);
   }
   &__btn {
     margin-top: 50px;
@@ -36,7 +37,6 @@
 }
 
 //tablet version
-
 @media @tablet {
   .form {
     &__btn {
@@ -55,14 +55,28 @@
         padding: 0;
         border: none;
       }
+      &--flex {
+
+      }
+    }
+    &__box {
+      width: 48%;
+      outline: 2px solid red;
     }
     &__title {
-      margin-left: 15px;
-      margin-right: 15px;
-      // width: 100% - 15px * 2;
-      top: -3.3%;
+      display: inline-block;
+      padding: 0 15px;
+      margin: 0 auto;
+      top: -0.7em;
+      left: 50%;
+      transform: translateX(-50%);
       background: @white;
-
+    }
+    &__flex-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 }

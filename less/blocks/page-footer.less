@@ -1,8 +1,8 @@
 .page-footer {
   .container();
   .clearfix();
+  .wrapper();
 }
-
 @media @mobile {
   .page-footer {
     &--hidden {
@@ -10,9 +10,25 @@
     }
   }
 }
-
 @media @tablet {
   .page-footer {
-
+    display: flex;
+    flex-flow: row wrap;
+    &__logo {
+      flex: 1 0 33.333333%;
+    }
+  }
+  .social {
+    flex: 1 0 33.333333%;
+    &__link {
+      display: none;
+    }
+  }
+  .copyright {
+    flex: 1 0 33.333333%;
+    &__text {
+      font-size: 14px;
+      line-height: 18 / 14;
+    }
   }
 }

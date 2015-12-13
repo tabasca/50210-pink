@@ -3,6 +3,10 @@
   background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
   background-size: cover;
   .container();
+  &__box {
+    padding-bottom: 91px - (60-50);
+    background: @dark-blue;
+  }
   &__content {
     background: @dark-blue;
   }
@@ -11,7 +15,7 @@
     background: @white;
   }
   &--inner {
-    background: @dark-blue url(../img/inner_top.jpg) no-repeat;
+    background: @white url(../img/inner_top.jpg) no-repeat;
     background-size: cover;
   }
   &__description {
@@ -57,7 +61,6 @@
 }
 
 //mobile version
-
 @media @mobile {
   .intro {
     &__description {
@@ -69,14 +72,15 @@
 }
 
 // tablet version
-
 @media @tablet {
   .intro {
-    outline: 2px solid red;
     padding-right: 320px;
     &--sub,
     &--inner {
       padding-right: 0;
+    }
+    &__box {
+      background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
     }
     &__title {
       padding-bottom: 40px - (48 - 40); //minus line-height
@@ -98,6 +102,7 @@
       margin-bottom: 0;
       padding-left: 80px;
       padding-right: 80px;
+      padding-top: 100px - (30 - 18); //minus line-height
       font-size: 18px;
       line-height: 30 / 18;
       &--hidden {

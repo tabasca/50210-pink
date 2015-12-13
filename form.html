@@ -36,9 +36,12 @@
   <main class="main-section">
 
     <section class="intro  intro--inner">
-      <h1 class="intro__title  intro__title--inner">
-        Конкурс на самое безбашенное путешествие с Пинк
-      </h1>
+      <div class="intro__box">
+        <!-- in chrome we have gray lines without this wrapper -->
+        <h1 class="intro__title  intro__title--inner">
+          Конкурс на самое безбашенное путешествие с Пинк
+        </h1>
+      </div>
       <p class="intro__description">
         Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
       </p>
@@ -68,33 +71,40 @@
         </label>
 
         <label class="form__radio  radio" for="ios">
-          <input class="radio__input" type="radio" id="android" name="android" value="Android" checked required>
+          <input class="radio__input" type="radio" id="android" name="android" value="Android" required>
           <span class="radio__indicator"></span>Pink для Android
         </label>
 
         <label class="form__radio  radio" for="ios">
-          <input class="radio__input" type="radio" id="windows-phone" name="windows-phone" value="Windows Phone" checked required>
+          <input class="radio__input" type="radio" id="windows-phone" name="windows-phone" value="Windows Phone" required>
           <span class="radio__indicator"></span>Windows Phone
         </label>
       </fieldset>
 
-      <fieldset class="form__item  form__item--bg_white">
+      <fieldset class="form__item  form__item--bg_white  form__item--flex">
         <legend class="form__title">
           Когда Вы путешествовали?*
         </legend>
-        <input class="input" type="text" id="departure" name="departure" value="1 апреля 2015" required>
-        <label class="label  label--center" for="departure">Дата выезда</label>
+        <div class="form__flex-wrapper">
+          <div class="form__box">
+            <input class="input" type="text" id="departure" name="departure" value="1 апреля 2015" required>
+            <label class="label  label--center" for="departure">Дата выезда</label>
+          </div>
 
-        <div class="plus-minus">
-          <button class="plus-minus__btn" type="button" name="btn-minus" value="-">-</button>
-          <input class="input  plus-minus__input" type="text" id="duration" name="duration" value="10 дней" required>
-          <button class="plus-minus__btn" type="button" name="btn-plus" value="+">+</button>
+          <div class="form__box">
+            <div class="plus-minus">
+              <button class="plus-minus__btn" type="button" name="btn-minus" value="-">-</button>
+              <input class="input  plus-minus__input" type="text" id="duration" name="duration" value="10 дней" required>
+              <button class="plus-minus__btn" type="button" name="btn-plus" value="+">+</button>
+            </div>
+            <label class="label  label--center" for="duration">Продолжительность</label>
+          </div>
+
+          <div class="form__box">
+            <input class="input" type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
+            <label class="label  label--center" for="arrival">Дата возвращения</label>
+          </div>
         </div>
-
-        <label class="label  label--center" for="duration">Продолжительность</label>
-
-        <input class="input" type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
-        <label class="label  label--center" for="arrival">Дата возвращения</label>
       </fieldset>
 
       <fieldset class="form__item  form__item--bg_gray">
@@ -102,7 +112,7 @@
           Количество попутчиков *
         </legend>
 
-        <div class="plus-minus">
+        <div class="plus-minus  plus-minus--tablet">
           <button class="plus-minus__btn" type="button" name="btn-minus" value="-">-</button>
           <input class="input  plus-minus__input" type="text" id="companions" name="companions" value="2 чел" required>
           <button class="plus-minus__btn" type="button" name="btn-plus" value="+">+</button>
@@ -112,6 +122,7 @@
           <li class="form-list__item">
             <label class="label  form-list__label" for="list-name">Имя *</label>
             <input class="input  form-list__input" type="text" id="list-name" name="name" value="Введите ваше имя" required>
+            <span class="form-list__delete">удалить</span>
 
             <label class="label  form-list__label" for="list-nickname">Прозвище</label>
             <input class="input  form-list__input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
@@ -120,6 +131,7 @@
           <li class="form-list__item">
             <label class="label  form-list__label" for="list-name">Имя *</label>
             <input class="input  form-list__input" type="text" id="list-name" name="name" value="Введите ваше имя" required>
+            <span class="form-list__delete">удалить</span>
 
             <label class="label  form-list__label" for="list-nickname">Прозвище</label>
             <input class="input  form-list__input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
@@ -257,12 +269,14 @@
 
     <div class="popup">
 
-      <h3 class="popup__title">
-        Что-то пошло не так!
-      </h3>
-      <p class="popup__description">
-        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-      </p>
+      <div class="popup__text">
+        <h3 class="popup__title">
+          Что-то пошло не так!
+        </h3>
+        <p class="popup__description">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </p>
+      </div>
 
       <div class="popup__btn  popup__btn--white_bg">
         <button class="btn  btn--green">Ок</button>
@@ -291,7 +305,7 @@
     </section>
 
     <section class="copyright">
-      <p class="text">разработано
+      <p class="copyright__text">Разработано
         <a class="copyright__logo" href="#"></a>
       </p>
     </section>
