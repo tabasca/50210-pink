@@ -1,32 +1,17 @@
 .page-footer {
   .clearfix();
-}
-@media @mobile {
-  .page-footer {
-    &--hidden {
-      .visuallyhidden();
-    }
-  }
-}
-@media @tablet {
-  .page-footer {
+  @media @tablet {
     display: flex;
     flex-flow: row wrap;
-    &__logo {
+  }
+  &__logo {
+    @media @tablet {
       flex: 1 0 33.333333%;
     }
   }
-  .social {
-    flex: 1 0 33.333333%;
-    &__link {
+  &--hidden {
+    @media @mobile {
       display: none;
-    }
-  }
-  .copyright {
-    flex: 1 0 33.333333%;
-    &__text {
-      font-size: 14px;
-      line-height: 18 / 14;
     }
   }
 }

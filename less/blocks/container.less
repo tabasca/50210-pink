@@ -1,29 +1,35 @@
 .container {
   .clearfix();
-  outline: 2px solid pink;
-  // padding-left: 20px;
-  // padding-right: 20px;
+  // outline: 2px solid pink;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
   text-align: center;
   @media @mobile {
-    max-width: 650px;
+    max-width: 660px;
   }
   @media @tablet {
-    // min-width: 660px;
-    max-width: 660px;
+    min-width: 660px;
+    max-width: 960px;
   }
   // @media @desktop {
   //   min-width: 960px;
   // }
   &--flex {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    @media @tablet {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
   }
   &--intro {
-    padding-right: 320px;
+    @media @tablet {
+      padding-right: 320px;
+    }
   }
   &--gray {
-    background: @light-gray;
+    @media @mobile {
+      background: @gray;
+    }
   }
 }

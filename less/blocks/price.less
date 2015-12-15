@@ -5,10 +5,12 @@
     padding-top: 68px;
     padding-bottom: 100px;
     border: 2px solid @light-gray;
-
     text-transform: uppercase;
     border-collapse: collapse;
     background: @gray;
+    @media @tablet {
+      padding: 0;
+    }
   }
   &__headline {
     position: relative;
@@ -17,10 +19,14 @@
     background: @dark-blue;
     border: none;
     border-right: 2px solid @light-gray;
+    @media @tablet {
+      width: 25%;
+      font-size: 16px;
+      line-height: 30 / 16;
+    }
     &:last-child {
       border-right: none;
     }
-
     border-bottom: none;
     line-height: 30 / 18;
     &--hit::before {
@@ -32,6 +38,15 @@
       top: 0;
       left: 0;
     }
+    &--hidden {
+      @media @mobile {
+        display: none;
+      }
+      @media @tablet {
+        border: none;
+        visibility: hidden;
+      }
+    }
   }
   &__title {
     margin: 0;
@@ -41,6 +56,10 @@
     margin: 0;
     font-weight: 100;
     font-size: @font-size--h1;
+    @media @tablet {
+      font-size: 18px;
+      line-height: 30 / 18;
+    }
   }
   &__description {
     padding: 20px 0;
@@ -49,64 +68,22 @@
     border-top: none;
     background: @white;
     text-align: left;
+    @media @tablet {
+      width: 25%;
+      padding-left: 18px - 2; //minus border
+      text-transform: none;
+      line-height: 30 / 14;
+    }
     &--yes {
       background: @white url(../img/yes.png) no-repeat 90% 50%;
     }
     &--no {
       background: @white url(../img/no.png) no-repeat 90% 50%;
     }
-  }
-}
-
-//mobile version
-
-@media @mobile {
-  .price {
-    &__description {
-      &--hidden {
-      .visuallyhidden();
+    &--hidden {
+      @media @mobile {
+        display: none;
       }
-    }
-    &__headline {
-      &--hidden {
-        .visuallyhidden();
-      }
-    }
-  }
-}
-
-
-// tablet version
-
-@media @tablet {
-  .slider--tablet {
-    padding-top: 90px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background: @gray;
-  }
-  .price {
-    &__row {
-      padding: 0;
-    }
-    &__headline {
-      width: 25%;
-      font-size: 16px;
-      line-height: 30 / 16;
-      &--hidden {
-        border: none;
-        visibility: hidden;
-      }
-    }
-    &__text {
-      font-size: 18px;
-      line-height: 30 / 18;
-    }
-    &__description {
-      width: 25%;
-      padding-left: 18px - 2; //minus border
-      text-transform: none;
-      line-height: 30 / 14;
     }
   }
 }

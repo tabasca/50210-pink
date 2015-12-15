@@ -1,32 +1,29 @@
 .btn {
   display: inline-block;
-  // width: 100% - 6.25%; //minus paddings
+
+  width: 100%;
   box-sizing: border-box;
   padding: 16px 0;
-  margin-left: 20px;
-  margin-right: 20px;
+
+  // padding-left: 20px;
+  // padding-right: 20px;
   font-size: @font-size--h3;
   line-height: 18 / 18;
   font-weight: 700;
   color: @white;
   border: 3px solid @white;
   &--green {
-    width: 100% - 6.25%; //minus paddings
-    padding: 25px - (30 - 18); //minus line-height
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
     line-height: 30 / 18;
     background: @green;
     text-transform: uppercase;
     border: none;
-  }
-  // .container();
-}
-
-//tablet version
-
-@media @tablet {
-  .btn {
-    &--green {
-      width: 300px - 13*2; //minus paddings;
+    @media @tablet {
+      padding-left: 60px;
+      padding-right: 60px;
+      width: 300px;
     }
   }
 }

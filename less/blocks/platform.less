@@ -1,6 +1,10 @@
 .platform {
   padding-top: 30px;
+  @media @tablet {
+    padding-top: 45px;
+  }
   &__link {
+
     // &--apple {
     //   img {
     //     // width: 46px;
@@ -19,14 +23,7 @@
     //     height: 42px;
     //   }
     // }
-  }
-}
-//tablet version
-
-@media @tablet {
-  .platform {
-    padding-top: 45px;
-    &__link {
+    @media @tablet {
       padding: 0;
       padding-right: 36px;
     }

@@ -5,6 +5,10 @@
   list-style-position: outside;
   text-align: left;
   list-style: none;
+  @media @tablet {
+    margin-top: 40px;
+    border-top: 2px solid @light-gray;
+  }
   &__label {
     display: block;
   }
@@ -13,6 +17,9 @@
     height: 59px;
     box-sizing: border-box;
     border: 2px solid @light-gray;
+    @media @tablet {
+      width: 300 / 500 * 100%;
+    }
   }
   &__item {
     list-style-type: none;
@@ -42,36 +49,7 @@
       top: 7%;
       color: @vinous;
     }
-  }
-}
-
-//mobile version
-@media @mobile {
-  .form-list {
-    &__delete {
-      .visuallyhidden();
-    }
-  }
-}
-
-//tablet version
-@media @tablet {
-  .form-list {
-    margin-top: 40px;
-    border-top: 2px solid @light-gray;
-    &__input {
-      width: 300 / 500 * 100%;
-    }
-    &__delete {
-      display: inline-block;
-      font-size: 14px;
-      line-height: 30 / 14;
-      text-transform: uppercase;
-      text-align: right;
-      vertical-align: middle;
-      width: 39%;
-    }
-    &__item {
+    @media @tablet {
       padding-left: 83px;
       &::before {
         margin-left: -20%;
@@ -80,6 +58,20 @@
       &::after {
         left: 26 / 500 * 100%;
       }
+    }
+  }
+  &__delete {
+    @media @mobile {
+      .visuallyhidden();
+    }
+    @media @tablet {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 30 / 14;
+      text-transform: uppercase;
+      text-align: right;
+      vertical-align: middle;
+      width: 39%;
     }
   }
 }
