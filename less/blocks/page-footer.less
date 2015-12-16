@@ -1,4 +1,17 @@
 .page-footer {
-  .container();
   .clearfix();
+  @media @tablet {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &__logo {
+    @media @tablet {
+      flex: 1 0 33.333333%;
+    }
+  }
+  &--hidden {
+    @media @mobile {
+      display: none;
+    }
+  }
 }

@@ -2,5 +2,18 @@
   padding-bottom: 68px;
   position: relative;
   .clearfix();
-  .container();
+  &--tablet {
+    @media @tablet {
+      padding-top: 90px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background: @gray;
+    }
+  }
 }
+// @media @tablet {
+//   .slider--tablet {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }

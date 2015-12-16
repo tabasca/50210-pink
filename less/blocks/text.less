@@ -2,7 +2,12 @@
   padding-top: 44px - (30 - 14); //minus line-height
   line-height: 30 / 14;
   text-transform: uppercase;
-  .container();
+  @media @tablet {
+    width: 100%;
+    padding-top: 0;
+    align-self: center;
+    text-align: right;
+  }
   &__decor--pink {
     color: @vinous;
   }

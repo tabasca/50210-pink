@@ -1,32 +1,43 @@
 .contacts {
   padding-top: 48px - 6; //minus line-height
-
-// .wrapper();
-  .container();
   .clearfix();
+  @media @tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   &__header {
     margin: 0;
     margin-bottom: 45px - 6 - 6; //minus line-height
     font-size: @font-size--h1;
     line-height: 30 / 24;
     font-weight: 300;
+    @media @tablet {
+      padding-left: 100px;
+      padding-right: 100px;
+      font-size: 40px;
+      line-height: 48 / 40;
+    }
   }
   &__title {
     margin: 0;
     font-size: @font-size--h3;
     line-height: 24 / 18;
     font-weight: 700;
+    @media @tablet {
+      width: 300px;
+    }
   }
   &__text {
     margin: 0;
     margin-bottom: 30px - 6 - 6; //minus line-height
-    .wrapper();
     font-size: @font-size--h1;
     font-weight: 300;
     line-height: 29 / 24;
     color: @vinous;
-    img {
-      padding-top: 10px;
+    @media @tablet {
+      width: 300px;
     }
   }
 }

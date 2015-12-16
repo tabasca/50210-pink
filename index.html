@@ -14,236 +14,334 @@
 <body class="page">
 
   <header class="page-header">
-    <div class="logo  page-header__logo">
-      <a class="page-header__logo-link" href="index.html">
-        <img src="img/pink-logo.png" alt="PINK">
-      </a>
+    <div class="container">
+      <div class="logo  page-header__logo">
+        <a class="page-header__logo-link" href="index.html">
+          <!-- <img src="img/logotype-white-mobile.svg" alt="PINK"> -->
+        </a>
+      </div>
+
+      <div class="page-header__btn-menu">
+      </div>
     </div>
 
-    <div class="page-header__btn-menu">
+    <div class="container">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link  link" href="#">ИНФОРМАЦИЯ</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  link" href="#">Блог</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  link" href="#">отзывы</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  link" href="form.html">конкурс</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__link  link" href="#">ИНФОРМАЦИЯ</a></li>
-        <li class="main-nav__item"><a class="main-nav__link  link" href="#">Блог</a></li>
-        <li class="main-nav__item"><a class="main-nav__link  link" href="#">отзывы</a></li>
-        <li class="main-nav__item"><a class="main-nav__link  link" href="form.html">конкурс</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main class="main-section">
 
     <section class="intro">
-      <h1 class="intro__title">
-        Взгляните на жизнь иначе!
-      </h1>
-      <div class="intro__content">
-        <a class="btn  intro__btn" href="#">Скачать приложение</a>
-        <div class="platform">
-          <a class="platform__link  platform__link--apple" href="#">
-            <img src="img/apple-logo.png" alt="iphone">
-          </a>
-          <a class="platform__link  platform__link--android" href="#">
-            <img src="img/android-logo.png" alt="android">
-          </a>
-          <a class="platform__link  platform__link--microsoft" href="#">
-            <img src="img/microsoft-logo.png" alt="microsoft">
-          </a>
+      <div class="container  container--intro">
+        <div class="intro__box">
+          <h1 class="intro__title">
+            Взгляните на жизнь иначе!
+          </h1>
         </div>
-        <p class="intro__text">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+        <div class="intro__content">
+          <a class="btn  intro__btn" href="#">Скачать приложение</a>
+          <div class="platform">
+            <a class="platform__link  platform__link--apple" href="#">
+              <img src="img/apple-logo.png" width="46px" height="46px" alt="iphone">
+            </a>
+            <a class="platform__link  platform__link--android" href="#">
+              <img src="img/android-logo.png" width="46px" height="46px" alt="android">
+            </a>
+            <a class="platform__link  platform__link--microsoft" href="#">
+              <img src="img/microsoft-logo.png" width="46px" height="46px" alt="microsoft">
+            </a>
+          </div>
+          <p class="intro__text">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </div>
       </div>
     </section>
 
-    <div class="intro intro--sub">
-      <h2 class="intro__title  intro__title--gray">
-        Устали от серости мегаполиса?
-      </h2>
-      <h2 class="intro__title  intro__title--gray">
-        Нам есть, что вам предложить!
-      </h2>
+    <div class="container">
+      <div class="intro intro--sub">
+        <h2 class="intro__title  intro__title--gray">
+          Устали от серости мегаполиса?
+        </h2>
+        <h2 class="intro__title  intro__title--gray">
+          Нам есть, что вам предложить!
+        </h2>
+      </div>
     </div>
 
     <div class="features">
 
-      <section class="features__item">
-        <h3 class="features__title">
-          Поднимает настроение
-        </h3>
-        <p class="features__description">
-          Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-        </p>
-      </section>
+      <div class="container  container--features">
+        <div class="features__row  features__row--img">
+          <img class="features__photo" src="img/iphone.png" width="270px" alt="">
+        </div>
 
-      <section class="features__item">
-        <h3 class="features__title">
-          Меняет мир вокруг
-        </h3>
-        <p class="features__description">
-          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-        </p>
-      </section>
-
-      <section class="features__item">
-        <h3 class="features__title">
-          Заводит новых друзей
-        </h3>
-        <p class="features__description">
-          Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
-        </p>
-      </section>
-
-      <img src="img/iphone.png" alt="" class="features__photo">
-
+        <div class="features__row  features__row--text">
+          <section class="features__item">
+            <h3 class="features__title">
+              Поднимает настроение
+            </h3>
+            <p class="features__description">
+              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            </p>
+          </section>
+          <section class="features__item">
+            <h3 class="features__title">
+              Меняет мир вокруг
+            </h3>
+            <p class="features__description">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+          </section>
+          <section class="features__item">
+            <h3 class="features__title">
+              Заводит новых друзей
+            </h3>
+            <p class="features__description">
+              Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+          </section>
+        </div>
+      </div>
     </div>
 
-    <section class="slider  js-flickity">
-      <blockquote class="quote">
-        <div class="quote__title">
-          <cite class="quote__cite">
-            Николай Петров
-          </cite>
-        </div>
-        <p class="quote__text">
-          &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
-        </p>
-      </blockquote>
-      <blockquote class="quote">
-        <div class="quote__title">
-          <cite class="quote__cite">
-            N/A
-          </cite>
-        </div>
-        <p class="quote__text">
-          &#171;N/A&#187;
-        </p>
-      </blockquote>
-      <blockquote class="quote">
-        <div class="quote__title">
-          <cite class="quote__cite">
-            N/A
-          </cite>
-        </div>
-        <p class="quote__text">
-          &#171;N/A&#187;
-        </p>
-      </blockquote>
+    <div class="features  features--tablet">
 
-    </section>
+      <div class="container  container--features">
+        <div class="features__row  features__row--img">
+          <img class="features__photo  features__photo--tablet" src="img/iphone.png" width="270px" alt="">
+        </div>
 
-    <div class="slider  js-flickity">
-      <section class="price  price--active">
-        <div class="price__headline  price__headline--hit">
-          <h4 class="price__title">
-            Стандарт
-          </h4>
-          <p class="price__text">
-            3,99 usd
+        <div class="features__row  features__row--text">
+
+          <section class="features__item">
+            <h3 class="features__title  features__title--tablet">
+              Эффект на 24 часа!
+            </h3>
+            <p class="features__description">
+              Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+            </p>
+            <a href="" class="features__link">Узнать больше об исследовании</a>
+          </section>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <section class="slider  js-flickity">
+        <blockquote class="quote">
+          <div class="quote__title">
+            <cite class="quote__cite">
+              Николай Петров
+            </cite>
+            <p class="quote__sign">25 лет, водитель трамвая</p>
+          </div>
+          <p class="quote__text">
+            &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&#187;
           </p>
-        </div>
-
-        <div class="price__item">
-          <div class="price__description  price__description--yes">
-            <span>Розовый фильтр</span>
+        </blockquote>
+        <blockquote class="quote">
+          <div class="quote__title">
+            <cite class="quote__cite">
+              N/A
+            </cite>
           </div>
-          <div class="price__description  price__description--yes">
-            <span>Смайлики</span>
-          </div>
-          <div class="price__description  price__description--no">
-            <span>Комментарии</span>
-          </div>
-        </div>
-      </section>
-      <section class="price">
-        <div class="price__headline">
-          <h4 class="price__title">
-            Стандарт
-          </h4>
-          <p class="price__text">
-            3,99 usd
+          <p class="quote__text">
+            &#171;N/A&#187;
           </p>
-        </div>
-
-        <div class="price__item">
-          <div class="price__description  price__description--yes">
-            <span>Розовый фильтр</span>
+        </blockquote>
+        <blockquote class="quote">
+          <div class="quote__title">
+            <cite class="quote__cite">
+              N/A
+            </cite>
           </div>
-          <div class="price__description  price__description--yes">
-            <span>Смайлики</span>
-          </div>
-          <div class="price__description  price__description--no">
-            <span>Комментарии</span>
-          </div>
-        </div>
-      </section>
-      <section class="price">
-        <div class="price__headline">
-          <h4 class="price__title">
-            Стандарт
-          </h4>
-          <p class="price__text">
-            3,99 usd
+          <p class="quote__text">
+            &#171;N/A&#187;
           </p>
-        </div>
+        </blockquote>
 
-        <div class="price__item">
-          <div class="price__description  price__description--yes">
-            <span>Розовый фильтр</span>
-          </div>
-          <div class="price__description  price__description--yes">
-            <span>Смайлики</span>
-          </div>
-          <div class="price__description  price__description--no">
-            <span>Комментарии</span>
-          </div>
-        </div>
       </section>
-      <!-- <div class="pagination">
-        <button class="pagination__item"></button>
-        <button class="pagination__item  pagination__item--active"></button>
-        <button class="pagination__item"></button>
-      </div> -->
+    </div>
+
+     <div class="container  container--gray">
+      <div class="slider  js-flickity  slider--tablet">
+
+        <section class="price  price--hidden">
+          <div class="price__headline  price__headline--hidden">
+            <h4 class="price__title">
+              Стандарт
+            </h4>
+            <p class="price__text">
+              3,99 usd
+            </p>
+          </div>
+          <div class="price__item">
+            <div class="price__description  price__description--yes">
+              <span>Розовый фильтр</span>
+            </div>
+            <div class="price__description  price__description--yes">
+              <span>Смайлики</span>
+            </div>
+            <div class="price__description  price__description--no">
+              <span>Комментарии</span>
+            </div>
+          </div>
+        </section>
+        <section class="price">
+          <div class="price__headline">
+            <h4 class="price__title">
+              База
+            </h4>
+            <p class="price__text">
+              1,99 usd
+            </p>
+          </div>
+          <div class="price__item">
+            <div class="price__description  price__description--yes">
+              <span>Розовый фильтр</span>
+            </div>
+            <div class="price__description  price__description--no">
+              <span>Смайлики</span>
+            </div>
+            <div class="price__description  price__description--no">
+              <span>Комментарии</span>
+            </div>
+          </div>
+        </section>
+        <section class="price">
+          <div class="price__headline  price__headline--hit">
+            <h4 class="price__title">
+              Стандарт
+            </h4>
+            <p class="price__text">
+              3,99 usd
+            </p>
+          </div>
+          <div class="price__item">
+            <div class="price__description  price__description--yes">
+              <span>Розовый фильтр</span>
+            </div>
+            <div class="price__description  price__description--no">
+              <span>Смайлики</span>
+            </div>
+            <div class="price__description  price__description--no">
+              <span>Комментарии</span>
+            </div>
+          </div>
+        </section>
+        <section class="price">
+          <div class="price__headline">
+            <h4 class="price__title">
+              Анлим
+            </h4>
+            <p class="price__text">
+              9,99 usd
+            </p>
+          </div>
+          <div class="price__item">
+            <div class="price__description  price__description--yes">
+              <span>Розовый фильтр</span>
+            </div>
+            <div class="price__description  price__description--yes">
+              <span>Смайлики</span>
+            </div>
+            <div class="price__description  price__description--no">
+              <span>Комментарии</span>
+            </div>
+          </div>
+        </section>
+        <!-- <div class="pagination">
+          <button class="pagination__item"></button>
+          <button class="pagination__item  pagination__item--active"></button>
+          <button class="pagination__item"></button>
+        </div> -->
+      </div>
     </div>
 
     <section class="contacts">
+      <div class="container  container--flex">
+        <h2 class="contacts__header">
+          Остались вопросы? Свяжитесь с нами!
+        </h2>
 
-      <h2 class="contacts__header">
-        Остались вопросы? Свяжитесь с нами!
-      </h2>
 
-      <h3 class="contacts__title">
-        Звоните:
-      </h3>
-      <p class="contacts__text">
-        +7 (812) 555-66-66
-      </p>
+        <div>
+          <h3 class="contacts__title">
+            Звоните:
+          </h3>
+          <p class="contacts__text">
+            +7 (812) 555-66-66
+          </p>
+        </div>
 
-      <h3 class="contacts__title">
-        Пишите:
-      </h3>
-      <p class="contacts__text">
-        mail@htmlacademy.ru
-      </p>
+        <div>
+          <h3 class="contacts__title">
+            Пишите:
+          </h3>
+          <p class="contacts__text">
+            mail@htmlacademy.ru
+          </p>
+        </div>
 
-      <h3 class="contacts__title">
-        Приезжайте в гости:
-      </h3>
-      <p class="contacts__text">
-        ул. Большая Конюшенная, 19/8
-      </p>
+        <div>
+          <h3 class="contacts__title">
+            Приезжайте в гости:
+          </h3>
+          <p class="contacts__text">
+            ул. Большая Конюшенная, 19/8
+          </p>
+        </div>
+      </div>
 
     </section>
 
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1448736962702"
-      width="320" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
+    <!-- <div class="container"> -->
+      <div class="map">
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1448736962702"
+        frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    <!-- </div> -->
 
   </main>
+
+  <footer class="page-footer  page-footer--hidden">
+
+    <div class="container  container--flex">
+      <section class="page-footer__logo">
+        <p class="text">
+          <a class="page-footer__logo-link" href="#"></a>
+        </p>
+      </section>
+
+      <section class="social">
+        <p class="text">
+          <a class="social__link" href="#">VKontakte</a>
+          <a class="social__link" href="#">Facebook</a>
+          <a class="social__link" href="#">YouTube</a>
+        </p>
+      </section>
+
+      <section class="copyright">
+        <p class="copyright__text">Разработано
+          <a class="copyright__logo" href="#"></a>
+        </p>
+      </section>
+    </div>
+
+  </footer>
+
   <script src="js/flickity.pkgd.min.js"></script>
+  <script src="js/flickity_close.js"></script>
   <script src="js/menu.js"></script>
 
 </body>

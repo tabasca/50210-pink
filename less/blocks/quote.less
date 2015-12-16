@@ -2,8 +2,12 @@
   width: 100%;
   margin: 0;
   margin-top: 50px - 12px; //minus line-height
-  .wrapper();
+  @media @tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   &__title {
+    margin-bottom: 40px;
     font-size: @font-size--h3;
     line-height: 30 / 18;
   }
@@ -14,5 +18,19 @@
   }
   &__text {
     line-height: 30 / 14;
+    @media @tablet {
+      font-size: @font-size--h3;
+      line-height: 30 / 18;
+    }
+  }
+  &__sign {
+    @media @mobile {
+      display: none;
+    }
+    @media @tablet {
+      margin: 0;
+      font-size: 14px;
+      line-height: 30 / 14;
+    }
   }
 }
