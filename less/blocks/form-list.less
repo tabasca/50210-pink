@@ -25,6 +25,9 @@
     list-style-type: none;
     padding-left: 63px;
     position: relative;
+    @media @tablet {
+      padding-left: 83px;
+    }
     &::before {
       box-sizing: border-box;
       counter-increment: list;
@@ -41,6 +44,10 @@
       margin-top: 42px;
       border: 2px solid @light-gray;
       border-right: none;
+      @media @tablet {
+        margin-left: -84px;
+        border-right: 2px solid @light-gray;
+      }
     }
     &::after {
       position: absolute;
@@ -48,14 +55,7 @@
       left: 26px;
       top: 7%;
       color: @vinous;
-    }
-    @media @tablet {
-      padding-left: 83px;
-      &::before {
-        margin-left: -20%;
-        border-right: 2px solid @light-gray;
-      }
-      &::after {
+      @media @tablet {
         left: 26 / 500 * 100%;
       }
     }

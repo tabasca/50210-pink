@@ -22,6 +22,20 @@
       justify-content: center;
     }
   }
+  &--features {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media @tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    // @media @tablet {
+    //   flex-direction: column;
+    // }
+  }
   &--intro {
     @media @tablet {
       padding-right: 320px;
