@@ -8,24 +8,14 @@
     @media @tablet {
       background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
     }
+    @media @desktop {
+      padding-bottom: 0;
+    }
   }
   &__content {
     background: @dark-blue;
   }
-  &--sub {
-    margin-bottom: 70px - 2; //minus line-height
-    background: @white;
-    @media @tablet {
-      padding-right: 0;
-    }
-  }
-  &--inner {
-    background: @white url(../img/inner_top.jpg) no-repeat;
-    background-size: cover;
-    @media @tablet {
-      padding-right: 0;
-    }
-  }
+
   &__description {
     margin-top: 0;
     padding-top: 57px - 16; //minus line-height
@@ -58,12 +48,18 @@
     font-weight: 300;
     line-height: 28 / 24;
     color: @white;
+    .clearfix();
     @media @tablet {
       padding-bottom: 40px - (48 - 40); //minus line-height
       font-size: 40px;
       line-height: 48 / 40;
     }
-    .clearfix();
+    @media @desktop {
+      padding-top: 229px - (60 - 50); //minus line-height
+      padding-bottom: 63px - (60 - 50); //minus line-height
+      font-size: 50px;
+      line-height: 60 / 50;
+    }
     &--inner {
       padding-bottom: 59px - 4; //minus line-height
       @media @tablet {
@@ -84,6 +80,12 @@
         }
       }
     }
+    &--paddings {
+      @media @desktop {
+        padding-left: 240px;
+        padding-right: 240px;
+      }
+    }
   }
   &__text {
     padding-top: 29px - 10; //minus line-height
@@ -101,6 +103,11 @@
       margin-top: 42px - (24 - 18); //minus line-height
       padding-bottom: 115px - (24 - 18); //minus line-height
     }
+    @media @desktop {
+      font-weight: 300;
+      padding-bottom: 127px - (24 - 18); //minus line-height
+
+    }
   }
   &__btn {
     margin-top: 28px;
@@ -109,6 +116,27 @@
       padding-left: 38 / 275 * 100%;
       padding-right: 38 / 275 * 100%;
       margin: 0;
+    }
+    @media @desktop {
+      padding-left: 28px;
+      padding-right: 28px;
+      font-size: 21px;
+      line-height: 18 / 21;
+      // font-weight: 600;
+    }
+  }
+  &--sub {
+    margin-bottom: 70px - 2; //minus line-height
+    background: @white;
+    @media @tablet {
+      padding-right: 0;
+    }
+  }
+  &--inner {
+    background: @white url(../img/inner_top.jpg) no-repeat;
+    background-size: cover;
+    @media @tablet {
+      padding-right: 0;
     }
   }
 }

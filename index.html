@@ -67,11 +67,11 @@
     </section>
 
     <div class="container">
-      <div class="intro intro--sub">
+      <div class="intro  intro--sub">
         <h2 class="intro__title  intro__title--gray">
           Устали от серости мегаполиса?
         </h2>
-        <h2 class="intro__title  intro__title--gray">
+        <h2 class="intro__title  intro__title--gray  intro__title--paddings">
           Нам есть, что вам предложить!
         </h2>
       </div>
@@ -82,6 +82,8 @@
       <div class="container  container--features">
         <div class="features__row  features__row--img">
           <img class="features__photo" src="img/iphone.png" width="270px" alt="">
+          <img class="features__photo  features__photo--desktop" src="img/iphone.png" width="270px" alt="">
+          <img class="features__photo  features__photo--desktop" src="img/iphone.png" width="270px" alt="">
         </div>
 
         <div class="features__row  features__row--text">
@@ -115,14 +117,14 @@
 
     <div class="features  features--tablet">
 
-      <div class="container  container--features">
-        <div class="features__row  features__row--img">
+      <div class="container  container--features  container--features_tablet">
+        <div class="features__row  features__row--img  features__row--img_tablet">
           <img class="features__photo  features__photo--tablet" src="img/iphone.png" width="270px" alt="">
         </div>
 
-        <div class="features__row  features__row--text">
+        <div class="features__row  features__row--text  features__row--text_tablet">
 
-          <section class="features__item">
+          <section class="features__item  features__item--tablet">
             <h3 class="features__title  features__title--tablet">
               Эффект на 24 часа!
             </h3>
@@ -269,37 +271,39 @@
     </div>
 
     <section class="contacts">
-      <div class="container  container--flex">
+      <div class="container">
         <h2 class="contacts__header">
-          Остались вопросы? Свяжитесь с нами!
+          Остались вопросы?</br>Свяжитесь с нами!
         </h2>
 
+        <div class="contacts__row">
 
-        <div>
-          <h3 class="contacts__title">
-            Звоните:
-          </h3>
-          <p class="contacts__text">
-            +7 (812) 555-66-66
-          </p>
-        </div>
+          <div class="contacts__flex  contacts__flex--left">
+            <h3 class="contacts__title">
+              Звоните:
+            </h3>
+            <p class="contacts__text">
+              +7 (812) 555-66-66
+            </p>
+          </div>
 
-        <div>
-          <h3 class="contacts__title">
-            Пишите:
-          </h3>
-          <p class="contacts__text">
-            mail@htmlacademy.ru
-          </p>
-        </div>
+          <div class="contacts__flex  contacts__flex--right">
+            <h3 class="contacts__title">
+              Пишите:
+            </h3>
+            <p class="contacts__text">
+              mail@htmlacademy.ru
+            </p>
+          </div>
 
-        <div>
-          <h3 class="contacts__title">
-            Приезжайте в гости:
-          </h3>
-          <p class="contacts__text">
-            ул. Большая Конюшенная, 19/8
-          </p>
+          <div class="contacts__flex  contacts__flex--center">
+            <h3 class="contacts__title">
+              Приезжайте в гости:
+            </h3>
+            <p class="contacts__text">
+              ул. Большая Конюшенная, 19/8
+            </p>
+          </div>
         </div>
       </div>
 

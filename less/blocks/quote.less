@@ -10,11 +10,19 @@
     margin-bottom: 40px;
     font-size: @font-size--h3;
     line-height: 30 / 18;
+    @media @desktop {
+      font-size: 24px;
+      line-height: 30 / 24;
+    }
   }
   &__cite {
     color: @black;
     font-style: normal;
     font-weight: 700;
+    @media @desktop {
+      font-size: 18px;
+      line-height: 30 / 18;
+    }
   }
   &__text {
     line-height: 30 / 14;
@@ -31,6 +39,10 @@
       margin: 0;
       font-size: 14px;
       line-height: 30 / 14;
+    }
+    @media @desktop {
+      font-size: 18px;
+      line-height: 30 / 18;
     }
   }
 }

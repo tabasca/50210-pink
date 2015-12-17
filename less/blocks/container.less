@@ -1,6 +1,6 @@
 .container {
   .clearfix();
-  // outline: 2px solid pink;
+  outline: 2px solid pink;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -12,9 +12,12 @@
     min-width: 660px;
     max-width: 960px;
   }
-  // @media @desktop {
-  //   min-width: 960px;
-  // }
+  @media @desktop {
+    min-width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
   &--flex {
     @media @tablet {
       display: flex;
@@ -32,13 +35,22 @@
       justify-content: center;
       align-content: center;
     }
-    // @media @tablet {
-    //   flex-direction: column;
-    // }
+
+    @media @desktop {
+      flex-direction: column;
+    }
+    &_tablet {
+      @media @desktop {
+        flex-direction: row;
+      }
+    }
   }
   &--intro {
     @media @tablet {
       padding-right: 320px;
+    }
+    @media @desktop {
+      padding-right: 650px;
     }
   }
   &--gray {

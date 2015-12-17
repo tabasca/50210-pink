@@ -14,6 +14,7 @@
     line-height: 30 / 24;
     font-weight: 300;
     @media @tablet {
+      width: 100%;
       padding-left: 100px;
       padding-right: 100px;
       font-size: 40px;
@@ -38,6 +39,29 @@
     color: @vinous;
     @media @tablet {
       width: 300px;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__flex {
+    &--center {
+      @media @desktop {
+        order: -1;
+      }
+    }
+    &--left {
+      @media @desktop {
+        order: -2;
+      }
+    }
+    &--right {
+      @media @desktop {
+        order: 1;
+      }
     }
   }
 }
