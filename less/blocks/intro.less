@@ -1,19 +1,43 @@
 .intro {
   position: relative;
-  background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
+  background: @dark-blue url(../img/index_top.jpg) no-repeat center center;
   background-size: cover;
+  @media @mobile {
+    background: @dark-blue url('../img/background-mobile@1x.jpg') no-repeat center center;
+    background-size: cover;
+    @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx) {
+              background: @dark-blue url('../img/background-mobile@2x.jpg') no-repeat center center;
+              background-size: cover;
+            }
+    @media (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+              background: @dark-blue url('../img/background-mobile@3x.jpg') no-repeat center center;
+              background-size: cover;
+            }
+  }
+  @media @tablet {
+    background: @dark-blue url('../img/background-tablet@1x.jpg') no-repeat center center;
+    background-size: cover;
+    @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx) {
+              background: @dark-blue url('../img/background-tablet@2x.jpg') no-repeat center center;
+              background-size: cover;
+            }
+  }
+  @media @desktop {
+    background: @dark-blue url('../img/background-fullsize.jpg') no-repeat center center;
+    background-size: cover;
+  }
   &__box {
     padding-bottom: 91px - (60-50);
-    background: @dark-blue;
-    @media @tablet {
-      background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
-    }
+    background: transparent;
     @media @desktop {
       padding-bottom: 0;
     }
   }
   &__content {
-    background: @dark-blue;
+    background: transparent;
   }
 
   &__description {
@@ -48,6 +72,7 @@
     font-weight: 300;
     line-height: 28 / 24;
     color: @white;
+    background: transparent;
     .clearfix();
     @media @tablet {
       padding-bottom: 40px - (48 - 40); //minus line-height
@@ -65,6 +90,9 @@
       @media @tablet {
         font-size: 50px;
         line-height: 60 / 50;
+      }
+      @media @desktop {
+        line-height: 1;
       }
     }
     &--gray {

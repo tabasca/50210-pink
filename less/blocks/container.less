@@ -1,8 +1,8 @@
 .container {
   .clearfix();
-  outline: 2px solid pink;
   padding-left: 20px;
   padding-right: 20px;
+  outline: 2px solid pink;
   margin: 0 auto;
   text-align: center;
   @media @mobile {
@@ -54,8 +54,10 @@
     }
   }
   &--gray {
-    @media @mobile {
-      background: @gray;
+    background: @gray;
+  }
+  &--form {
+    @media @desktop {
     }
   }
 }
