@@ -219,17 +219,17 @@
           <div class="wrapper  wrapper--flex">
             <div class="wrapper__item">
               <label class="label" for="name">имя: *</label>
-              <input class="input" type="text" id="name" name="name" value="Введите ваше имя" required>
+              <input class="input" type="text" id="name" name="name" placeholder="Введите ваше имя" required>
             </div>
 
             <div class="wrapper__item">
               <label class="label" for="surname">фамилия: *</label>
-              <input class="input" type="text" id="surname" name="surname" value="Укажите фамилию" required>
+              <input class="input" type="text" id="surname" name="surname" placeholder="Укажите фамилию" required>
             </div>
 
             <div class="wrapper__item">
               <label class="label" for="second-name">отчество: </label>
-              <input class="input" type="text" id="second-name" name="second-name" value="Ну и отчество тоже">
+              <input class="input" type="text" id="second-name" name="second-name" placeholder="Ну и отчество тоже">
             </div>
           </div>
         </fieldset>
@@ -244,21 +244,21 @@
 
             <div class="wrapper__item">
               <label class="form__radio  radio" for="ios">
-                <input class="radio__input" type="radio" id="ios" name="ios" value="iOS" checked required>
+                <input class="radio__input" type="radio" id="ios" name="platform" value="iOS" checked required>
                 <span class="radio__indicator"></span>Pink для iOS
               </label>
             </div>
 
             <div class="wrapper__item">
               <label class="form__radio  radio" for="android">
-                <input class="radio__input" type="radio" id="android" name="android" value="Android" required>
+                <input class="radio__input" type="radio" id="android" name="platform" value="Android" required>
                 <span class="radio__indicator"></span>Pink для Android
               </label>
             </div>
 
             <div class="wrapper__item">
               <label class="form__radio  radio" for="windows-phone">
-                <input class="radio__input" type="radio" id="windows-phone" name="windows-phone" value="Windows Phone" required>
+                <input class="radio__input" type="radio" id="windows-phone" name="platform" value="Windows Phone" required>
                 <span class="radio__indicator"></span>Windows Phone
               </label>
             </div>
@@ -275,21 +275,21 @@
 
           <!-- <div class="form__flex-wrapper"> -->
             <div class="wrapper__item  wrapper__item--half_width">
-              <input class="input" type="text" id="departure" name="departure" value="1 апреля 2015" required>
+              <input class="input" type="text" id="departure" name="departure" placeholder="1 апреля 2015" required>
               <label class="label  label--center" for="departure">Дата выезда</label>
             </div>
 
             <div class="wrapper__item  wrapper__item--half_width">
-              <div class="plus-minus">
-                <button class="plus-minus__btn" type="button" name="btn-minus" value="-">-</button>
-                <input class="input  plus-minus__input" type="text" id="duration" name="duration" value="10 дней" required>
-                <button class="plus-minus__btn" type="button" name="btn-plus" value="+">+</button>
+              <div class="plus-minus  plus-minus_duration">
+                <button class="plus-minus__btn  plus-minus__btn--minus" type="button" name="btn-minus" value="-">-</button>
+                <input class="input  plus-minus__input" type="text" id="duration" name="duration" placeholder="10 дней" required>
+                <button class="plus-minus__btn  plus-minus__btn--plus" type="button" name="btn-plus" value="+">+</button>
               </div>
               <label class="label  label--center" for="duration">Продолжительность</label>
             </div>
 
             <div class="wrapper__item  wrapper__item--half_width">
-              <input class="input" type="text" id="arrival" name="arrival" value="1 апреля 2015" required>
+              <input class="input" type="text" id="arrival" name="arrival" placeholder="1 апреля 2015" required>
               <label class="label  label--center" for="arrival">Дата возвращения</label>
             </div>
           </div>
@@ -303,46 +303,31 @@
           </legend>
 
           <div class="plus-minus  plus-minus--tablet">
-            <button class="plus-minus__btn  plus-minus__btn--tablet" type="button" name="btn-minus" value="-">-</button>
-            <input class="input  plus-minus__input  plus-minus__input--tablet" type="text" id="companions" name="companions" value="2 чел" required>
-            <button class="plus-minus__btn  plus-minus__btn--tablet" type="button" name="btn-plus" value="+">+</button>
+            <button class="plus-minus__btn  plus-minus__btn--tablet  plus-minus__btn--minus" id="companions_count_minus" type="button" name="btn-minus" value="-">-</button>
+            <input class="input  plus-minus__input  plus-minus__input--tablet" type="text" id="companions_count" name="companions" value="2" min="0" required>
+            <button class="plus-minus__btn  plus-minus__btn--tablet  plus-minus__btn--plus" id="companions_count_plus" type="button" name="btn-plus" value="+">+</button>
           </div>
 
-          <ol class="form-list">
-              <li class="form-list__item">
-                <div class="wrapper  wrapper--flex  wrapper--flex_row">
-                  <div class="wrapper__item  wrapper__item--list">
-                    <label class="label  form-list__label" for="list-name">Имя *</label>
-                    <input class="input  form-list__input" type="text" id="list-name" name="name" value="Введите ваше имя" required>
+          <ol class="companions">
+            <script id="companion-template" type="text/html">
+                <li class="form-list__item">
+                  <div class="wrapper  wrapper--flex  wrapper--flex_row">
+                    <div class="wrapper__item  wrapper__item--list">
+                      <label class="label  form-list__label" for="list-name">Имя *</label>
+                      <input class="input  form-list__input" type="text" id="list-name" name="list-name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="wrapper__item  wrapper__item--del">
+                      <span class="form-list__delete">удалить</span>
+                    </div>
+                    <div class="wrapper__item  wrapper__item--list">
+                      <label class="label  form-list__label" for="list-nickname">Прозвище</label>
+                      <input class="input  form-list__input" type="text" id="list-nickname" name="nickname" placeholder="Ну как же без этого!">
+                    </div>
                   </div>
-                  <div class="wrapper__item  wrapper__item--del">
-                    <span class="form-list__delete">удалить</span>
-                  </div>
-                  <div class="wrapper__item  wrapper__item--list">
-                    <label class="label  form-list__label" for="list-nickname">Прозвище</label>
-                    <input class="input  form-list__input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
-                  </div>
-                </div>
-              </li>
-
-              <li class="form-list__item">
-                <div class="wrapper  wrapper--flex  wrapper--flex_row">
-                  <div class="wrapper__item  wrapper__item--list">
-                    <label class="label  form-list__label" for="list-name">Имя *</label>
-                    <input class="input  form-list__input" type="text" id="list-name" name="name" value="Введите ваше имя" required>
-                  </div>
-                  <div class="wrapper__item  wrapper__item--del">
-                    <span class="form-list__delete">удалить</span>
-                  </div>
-                  <div class="wrapper__item  wrapper__item--list">
-                    <label class="label  form-list__label" for="list-nickname">Прозвище</label>
-                    <input class="input  form-list__input" type="text" id="list-nickname" name="nickname" value="Ну как же без этого!">
-                  </div>
-                </div>
-              </li>
-            </div>
+                </li>
+            </script>
           </ol>
-
+          
         </fieldset>
       </div>
 
@@ -403,52 +388,21 @@
             <label class="label" for="photo">
               <button class="btn  photo-attach__btn">Загрузить фото</button>
               <mark>Файл не выбран</mark>
-              <input class="input" type="file" id="photo" name="contest-form__item" required>
+              <input class="input" type="file" id="upload_photo" name="contest-form__item" required multiple>
             </label>
           </div>
 
-          <div class="photo">
-            <div class="photo__item">
-              <img class="photo__img" src="img/photo__item--1.jpg" alt="photo_1">
+          <div class="photo  upload-images">
+            <script id="image-template" type="text/html">
+
+            <!-- <div class="photo__item"> -->
+              <img class="photo__img" src="{{image}}" alt="{{name}}" title="{{name}}">
               <button class="photo__del" type="button" name="btn-del" value="del"></button>
               <span class="photo__name">img-1.jpg</span>
-            </div>
-            <div class="photo__item">
-              <img class="photo__img" src="img/photo__item--2.jpg" alt="photo_2">
-              <button class="photo__del  photo__del--center" type="button" name="btn-del" value="del"></button>
-              <span class="photo__name">img-1.jpg</span>
-            </div>
-            <div class="photo__item">
-              <img class="photo__img" src="img/photo__item--3.jpg" alt="photo_3">
-              <button class="photo__del  photo__del--right" type="button" name="btn-del" value="del"></button>
-              <span class="photo__name">img-1.jpg</span>
-            </div>
-            <div class="photo__item">
-              <img class="photo__img" src="img/photo__item--4.jpg" alt="photo_4">
-              <button class="photo__del" type="button" name="btn-del" value="del"></button>
-              <span class="photo__name">img-1.jpg</span>
-            </div>
-            <div class="photo__item">
-              <img class="photo__img" src="img/photo__item--5.jpg" alt="photo_5">
-              <button class="photo__del  photo__del--center" type="button" name="btn-del" value="del"></button>
-              <span class="photo__name">img-1.jpg</span>
-            </div>
-            <div class="photo__item">
-              <img class="photo__img" src="#" alt="photo_6">
-              <button class="photo__del  photo__del--right" type="button" name="btn-del" value="del"></button>
-              <span class="photo__name">img-1.jpg</span>
-            </div>
-            <div class="photo__item">
-              <img class="photo__img" src="#" alt="photo_7">
-              <button class="photo__del" type="button" name="btn-del" value="del"></button>
-              <span class="photo__name">img-1.jpg</span>
-            </div>
-            <div class="photo__item">
-              <img class="photo__img" src="#" alt="photo_8">
-              <button class="photo__del  photo__del--center" type="button" name="btn-del" value="del"></button>
-              <span class="photo__name">img-1.jpg</span>
-            </div>
-          </div>
+            <!-- </div> -->
+          </script>
+        </div>
+
 
         </fieldset>
       </div>
@@ -674,7 +628,9 @@
 
   </footer>
 
+  <script src="js/vendors/mustache.min.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/form_script.js"></script>
 
 </body>
 
