@@ -8,6 +8,13 @@
   line-height: 30 / 18;
   border: 2px solid @light-gray;
   color: @dark-blue;
+  outline: none;
+  &:hover {
+    border-color: @black;
+  }
+  &:active {
+    border-color: @vinous;
+  }
   &--checkbox {
     display: none;
     &:checked + .label:before {

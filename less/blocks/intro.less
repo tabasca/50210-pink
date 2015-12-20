@@ -1,43 +1,56 @@
 .intro {
   position: relative;
-  background: @dark-blue url(../img/index_top.jpg) no-repeat center center;
-  background-size: cover;
-  @media @mobile {
-    background: @dark-blue url('../img/background-mobile@1x.jpg') no-repeat center center;
-    background-size: cover;
-    @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx) {
-              background: @dark-blue url('../img/background-mobile@2x.jpg') no-repeat center center;
-              background-size: cover;
-            }
-    @media (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-              background: @dark-blue url('../img/background-mobile@3x.jpg') no-repeat center center;
-              background-size: cover;
-            }
-  }
-  @media @tablet {
-    background: @dark-blue url('../img/background-tablet@1x.jpg') no-repeat center center;
-    background-size: cover;
-    @media (min-resolution: 144dpi),
-            (min-resolution: 1.5dppx) {
-              background: @dark-blue url('../img/background-tablet@2x.jpg') no-repeat center center;
-              background-size: cover;
-            }
-  }
-  @media @desktop {
-    background: @dark-blue url('../img/background-fullsize.jpg') no-repeat center center;
-    background-size: cover;
-  }
+
   &__box {
-    padding-bottom: 91px - (60-50);
+    // padding-bottom: 91px - (60-50);
     background: transparent;
     @media @desktop {
       padding-bottom: 0;
     }
+    @media @mobile {
+      background: url('../img/iphone-hand-mobile.png') no-repeat center left,
+                  @dark-blue url('../img/background-mobile@1x.jpg') no-repeat center center;
+      @media (min-resolution: 144dpi),
+              (min-resolution: 1.5dppx) {
+                background: url('../img/iphone-hand-mobile@2x.png') no-repeat center left,
+                            @dark-blue url('../img/background-mobile@2x.jpg') no-repeat center center;
+                background-size: 257px 285px, cover;
+              }
+      @media (min-resolution: 192dpi),
+              (min-resolution: 2dppx) {
+                background: url('../img/iphone-hand-mobile@3x.png') no-repeat center left,
+                            @dark-blue url('../img/background-mobile@3x.jpg') no-repeat center top;
+                background-size: 257px 285px, cover;
+              }
+    }
+    @media @tablet {
+      background: url('../img/iphone-hand-tablet@1x.png') no-repeat center center,
+                  @dark-blue url('../img/background-tablet@1x.jpg') no-repeat center center;
+      background-size: contain, cover;
+      @media (min-resolution: 144dpi),
+              (min-resolution: 1.5dppx) {
+                background: url('../img/iphone-hand-tablet@2x.png') no-repeat center center,
+                            @dark-blue url('../img/background-tablet@2x.jpg') no-repeat center center;
+                background-size: 257px 285px, cover;
+              }
+    }
+    @media @desktop {
+      background: url('../img/iphone-hand-desktop@1x.png') no-repeat center center,
+                  @dark-blue url('../img/background-fullsize.jpg') no-repeat center center;
+      background-size: contain, cover;
+      @media (min-resolution: 144dpi),
+              (min-resolution: 1.5dppx) {
+                background: url('../img/iphone-hand-desktop@2x.png') no-repeat bottom center,
+                            @dark-blue url('../img/background-fullsize.jpg') no-repeat center center;
+                background-size: contain, cover;
+              }
+    }
   }
   &__content {
-    background: transparent;
+    background: @dark-blue;
+    @media @tablet {
+      background: transparent;
+    }
   }
 
   &__description {
@@ -151,6 +164,10 @@
       font-size: 21px;
       line-height: 18 / 21;
       // font-weight: 600;
+    }
+    &:hover {
+      color: @vinous;
+      background: @white;
     }
   }
   &--sub {

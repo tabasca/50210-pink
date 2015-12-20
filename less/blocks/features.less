@@ -12,6 +12,7 @@
       display: flex;
     }
     &--img {
+      position: relative;
       @media @tablet {
         width: 50%;
       }
@@ -20,6 +21,9 @@
         width: 100%;
       }
       &_tablet {
+        @media @tablet {
+          width: 262px;
+        }
         @media @desktop {
           width: 300 / 940 * 100%;
         }
@@ -28,15 +32,26 @@
     &--text {
       @media @tablet {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       @media @desktop {
+        flex-direction: row;
         justify-content: space-around;
         width: 100%;
       }
       &_tablet {
+        // @media @tablet {
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
         @media @desktop {
           width: calc(100% - 300 / 940 * 100%);
-          // padding-right: 118.599px;
+          padding-left: 67px;
+          padding-right: 51px;
         }
       }
     }
@@ -48,7 +63,7 @@
     font-weight: 700;
     line-height: 24 / 18;
     @media @desktop {
-      padding-top: 59px;
+      // padding-top: 59px;
       font-size: 30px;
       line-height: 1;
     }
@@ -56,6 +71,7 @@
       @media @tablet {
         font-size: 30px;
         line-height: 36 / 30;
+        padding-right: 140 / 380 * 100%;
       }
       @media @desktop {
         font-size: 30px;
@@ -92,6 +108,22 @@
       }
     }
   }
+  &__hours{
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    padding: 19px 41px;
+    // height: 100%;
+    font-size: 104.6px;
+    line-height: 162.87px;
+    font-weight: 700;
+    color: @vinous;
+    text-align: center;
+    align-self: center;
+    border: 10px solid @vinous;
+    border-radius: 50%;
+  }
   &__item {
     @media @tablet {
       justify-content: space-around;
@@ -109,6 +141,9 @@
         padding-right: 0;
         text-align: left;
       }
+    }
+    &--flex {
+      display: flex;
     }
   }
   &__link {
@@ -134,4 +169,5 @@
       background: @gray;
     }
   }
+
 }

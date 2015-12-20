@@ -40,6 +40,16 @@
     @media @tablet {
       width: 300px;
     }
+    &--link {
+      &:hover {
+        color: @dark-blue;
+        text-decoration: underline;
+      }
+      &:active {
+        opacity: 0.5;
+        text-decoration: none;
+      }
+    }
   }
   &__row {
     display: flex;

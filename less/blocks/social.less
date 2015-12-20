@@ -1,8 +1,28 @@
 .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   @media @tablet {
-    flex: 1 0 33.333333%;
+    width: 33.333333%;
     &__link {
-      display: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 51px;
+      height: 51px;
+      border: 3px solid @light-gray;
+      border-radius: 50%;
     }
   }
+}
+
+.youtube {
+  fill: @vinous;
+}
+.twitter {
+  fill: @vinous;
+}
+.facebook {
+  fill: @vinous;
 }

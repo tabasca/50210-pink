@@ -1,7 +1,8 @@
-var elem = document.querySelector('.slider');
-var flkty
-function sliderOn(){
-	return flkty = new Flickity( elem, {
+var elem = document.querySelector('.slider-table');
+var elemHidden = document.querySelector('.price--hidden');
+var flkty;
+if (window.innerWidth < 660){
+	flkty = new Flickity( elem, {
 			// options
 			cellAlign: 'left',
 			contain: true,
@@ -11,22 +12,4 @@ function sliderOn(){
 	});
 }
 
-function sliderOff(){
-
-	return flkty.destroy();
-}
-
-if (window.innerWidth < 660){
-	sliderOn();
-} else {
-	sliderOff();
-}
-
-window.addEventListener('resize', function(){
-	if (window.innerWidth < 660){
-		sliderOn();
-	} else {
-		sliderOff();
-	}
-})
-// sliderOff();
+flkty.remove(elemHidden);

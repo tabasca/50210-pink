@@ -3,10 +3,21 @@
 // }
 .js-menu .main-nav {
   display: none;
+  @media @desktop {
+    display: block;
+  }
 }
 .js-menu--open .main-nav {
   display: block;
 }
-.js-menu--open .page-header__btn-menu {
-  background: url(../img/close-menu-btn.png) no-repeat center center;
+.js-menu--open.page-header {
+  background-color: @dark-blue;
+}
+
+.js-menu--open .burger {
+  display: none;
+}
+
+.js-menu--open .cross {
+  display: block;
 }
