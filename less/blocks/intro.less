@@ -1,31 +1,58 @@
 .intro {
   position: relative;
-  background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
-  background-size: cover;
+
   &__box {
-    padding-bottom: 91px - (60-50);
-    background: @dark-blue;
+    // padding-bottom: 91px - (60-50);
+    background: transparent;
+    @media @desktop {
+      padding-bottom: 0;
+    }
+    @media @mobile {
+      background: url('../img/iphone-hand-mobile.png') no-repeat center left,
+                  @dark-blue url('../img/background-mobile@1x.jpg') no-repeat center center;
+      @media (min-resolution: 144dpi),
+              (min-resolution: 1.5dppx) {
+                background: url('../img/iphone-hand-mobile@2x.png') no-repeat center left,
+                            @dark-blue url('../img/background-mobile@2x.jpg') no-repeat center center;
+                background-size: 257px 285px, cover;
+              }
+      @media (min-resolution: 192dpi),
+              (min-resolution: 2dppx) {
+                background: url('../img/iphone-hand-mobile@3x.png') no-repeat center left,
+                            @dark-blue url('../img/background-mobile@3x.jpg') no-repeat center top;
+                background-size: 257px 285px, cover;
+              }
+    }
     @media @tablet {
-      background: @dark-blue url(../img/index_top.jpg) no-repeat center top;
+      background: url('../img/iphone-hand-tablet@1x.png') no-repeat center center,
+                  @dark-blue url('../img/background-tablet@1x.jpg') no-repeat center center;
+      background-size: contain, cover;
+      @media (min-resolution: 144dpi),
+              (min-resolution: 1.5dppx) {
+                background: url('../img/iphone-hand-tablet@2x.png') no-repeat center center,
+                            @dark-blue url('../img/background-tablet@2x.jpg') no-repeat center center;
+                background-size: 257px 285px, cover;
+              }
+    }
+    @media @desktop {
+      background: url('../img/iphone-hand-desktop@1x.png') no-repeat center center,
+                  @dark-blue url('../img/background-fullsize.jpg') no-repeat center center;
+      background-size: contain, cover;
+      @media (min-resolution: 144dpi),
+              (min-resolution: 1.5dppx) {
+                background: url('../img/iphone-hand-desktop@2x.png') no-repeat bottom center,
+                            @dark-blue url('../img/background-fullsize.jpg') no-repeat center center;
+                background-size: contain, cover;
+              }
     }
   }
   &__content {
     background: @dark-blue;
-  }
-  &--sub {
-    margin-bottom: 70px - 2; //minus line-height
-    background: @white;
     @media @tablet {
-      padding-right: 0;
+      background: transparent;
     }
   }
-  &--inner {
-    background: @white url(../img/inner_top.jpg) no-repeat;
-    background-size: cover;
-    @media @tablet {
-      padding-right: 0;
-    }
-  }
+
   &__description {
     margin-top: 0;
     padding-top: 57px - 16; //minus line-height
@@ -58,17 +85,27 @@
     font-weight: 300;
     line-height: 28 / 24;
     color: @white;
+    background: transparent;
+    .clearfix();
     @media @tablet {
       padding-bottom: 40px - (48 - 40); //minus line-height
       font-size: 40px;
       line-height: 48 / 40;
     }
-    .clearfix();
+    @media @desktop {
+      padding-top: 229px - (60 - 50); //minus line-height
+      padding-bottom: 63px - (60 - 50); //minus line-height
+      font-size: 50px;
+      line-height: 60 / 50;
+    }
     &--inner {
       padding-bottom: 59px - 4; //minus line-height
       @media @tablet {
         font-size: 50px;
         line-height: 60 / 50;
+      }
+      @media @desktop {
+        line-height: 1;
       }
     }
     &--gray {
@@ -82,6 +119,12 @@
         &:first-child {
           padding-top: 58px - (48 - 40);
         }
+      }
+    }
+    &--paddings {
+      @media @desktop {
+        padding-left: 240px;
+        padding-right: 240px;
       }
     }
   }
@@ -101,6 +144,11 @@
       margin-top: 42px - (24 - 18); //minus line-height
       padding-bottom: 115px - (24 - 18); //minus line-height
     }
+    @media @desktop {
+      font-weight: 300;
+      padding-bottom: 127px - (24 - 18); //minus line-height
+
+    }
   }
   &__btn {
     margin-top: 28px;
@@ -109,6 +157,31 @@
       padding-left: 38 / 275 * 100%;
       padding-right: 38 / 275 * 100%;
       margin: 0;
+    }
+    @media @desktop {
+      padding-left: 28px;
+      padding-right: 28px;
+      font-size: 21px;
+      line-height: 18 / 21;
+      // font-weight: 600;
+    }
+    &:hover {
+      color: @vinous;
+      background: @white;
+    }
+  }
+  &--sub {
+    margin-bottom: 70px - 2; //minus line-height
+    background: @white;
+    @media @tablet {
+      padding-right: 0;
+    }
+  }
+  &--inner {
+    background: @white url(../img/inner_top.jpg) no-repeat;
+    background-size: cover;
+    @media @tablet {
+      padding-right: 0;
     }
   }
 }

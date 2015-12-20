@@ -1,14 +1,32 @@
 .main-nav {
+  width: 100%;
   position: absolute;
   top: 100%;
+  background: @dark-blue;
+
+  @media @desktop {
+    position: static;
+    border: none;
+    background: none;
+  }
+
+
   // .visuallyhidden()
   &__list {
     padding: 0;
     margin: 0;
     list-style: none;
+    @media @desktop {
+      width: 550px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
   }
   &__item > .link {
     display: block;
+
     padding: 26px - (32 - 18) 0; //minus line-height
     border-bottom: 1px solid black;
     border-top: 1px solid #495461;
@@ -20,5 +38,11 @@
     color: @white;
     text-decoration: none;
     text-transform: uppercase;
+    @media @desktop {
+      border: none;
+
+      background: none;
+    }
+
   }
 }

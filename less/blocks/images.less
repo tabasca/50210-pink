@@ -1,0 +1,41 @@
+.burger {
+  fill: @white;
+  &:hover {
+    fill: @vinous;
+  }
+  &:active {
+    fill: @vinous;
+    opacity: 0.5;
+  }
+}
+.svg--hidden {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.cross {
+  fill: @white;
+  display: none;
+  &:hover {
+    fill: @vinous;
+  }
+  &:active {
+    fill: @vinous;
+    opacity: 0.5;
+  }
+}
+.timer {
+  // width: 100%;
+  @media @tablet {
+    fill: @gray;
+  }
+  @media @desktop {
+    fill: @dark-gray;
+  }
+}
+.yes {
+  fill: @green;
+}
+.no {
+  fill: #f25b26;
+}

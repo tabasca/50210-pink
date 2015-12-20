@@ -13,6 +13,12 @@
       padding-left: 70px;
       padding-right: 70px;
     }
+    &--desktop {
+      @media @desktop {
+        padding-left: 160px;
+        padding-right: 160px;
+      }
+    }
   }
   &__title {
     padding: 0;
@@ -45,6 +51,11 @@
     &--white_bg {
       padding-top: 0;
       background: @white;
+    }
+  }
+  &--desktop {
+    @media @desktop {
+      width: 780px;
     }
   }
 }

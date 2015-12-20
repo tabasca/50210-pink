@@ -1,12 +1,29 @@
 .page-footer {
+  padding: 25px 0;
   .clearfix();
   @media @tablet {
     display: flex;
     flex-flow: row wrap;
   }
   &__logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     @media @tablet {
-      flex: 1 0 33.333333%;
+      width: 33.333333%;
+    }
+    &--tablet {
+      @media @desktop {
+        display: none;
+      }
+    }
+    &--desktop {
+      @media @tablet {
+        display: none;
+      }
+      @media @desktop {
+        display: block;
+      }
     }
   }
   &--hidden {
