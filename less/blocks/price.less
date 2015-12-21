@@ -23,8 +23,8 @@
     }
     @media @tablet {
       width: 100%;
-      font-size: 16px;
-      line-height: 30 / 16;
+
+      text-transform: uppercase;
     }
     &:last-child {
       border-right: none;
@@ -53,6 +53,11 @@
   &__title {
     margin: 0;
     font-size: @font-size--h3;
+    @media @tablet {
+      font-size: 16px;
+      line-height: 30 / 16;
+      font-weight: 600;
+    }
   }
   &__text {
     margin: 0;
@@ -71,6 +76,7 @@
     border-top: none;
     background: @white;
     text-align: center;
+
     @media @mobile {
       display: flex;
       justify-content: space-between;
@@ -81,9 +87,21 @@
     }
     @media @tablet {
       width: 100%;
+      padding: 13px 0;
       text-transform: none;
       line-height: 30 / 14;
     }
+    &--no {
+      @media @tablet {
+        padding: 10.5px 0;
+      }
+    }
+    &--hidden {
+      @media @tablet {
+        padding: 13.5px 0;
+      }
+    }
+
     &_item {
       &--hidden {
         @media @tablet {

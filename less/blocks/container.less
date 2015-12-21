@@ -23,6 +23,11 @@
       flex-flow: row wrap;
       justify-content: center;
     }
+    &_between {
+      @media @tablet {
+        justify-content: space-between;
+      }
+    }
   }
   &--features {
     display: flex;
@@ -58,12 +63,13 @@
   }
   &--gray {
     background: @gray;
-    @media @desktop {
-      background: @white;
-    }
+    // @media @desktop {
+    //   background: @white;
+    // }
   }
   &--form {
     @media @desktop {
+      background: @white;
     }
   }
 }

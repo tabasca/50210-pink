@@ -13,15 +13,36 @@
     }
     &--img {
       position: relative;
+      @media @mobile {
+        padding-top: 20px;
+        background: url('../img/iphone-case-mobile@1x.png') no-repeat 50% 0%;
+        background-size: contain;
+        @media (min-resolution: 144dpi),
+                (min-resolution: 1.5dppx) {
+                  background: url('../img/iphone-case-mobile@2x.png') no-repeat 50% 0%;
+                  background-size: contain;
+                }
+        @media (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                  background: url('../img/iphone-case-mobile@3x.png') no-repeat 50% 0%;
+                  background-size: contain;
+                }
+      }
       @media @tablet {
+        display: flex;
         width: 50%;
+        align-items: flex-end;
+        justify-content: center;
+        background: transparent;
       }
       @media @desktop {
-        justify-content: space-around;
+        justify-content: center;
+        margin-bottom: 59px;
         width: 100%;
       }
       &_tablet {
         @media @tablet {
+          display: block;
           width: 262px;
         }
         @media @desktop {
@@ -85,6 +106,9 @@
     margin-bottom: 43px - 6 - 6; //minus line-height
     color: @dark-blue;
     line-height: 24 / 14;
+    @media @tablet {
+      margin-bottom: 12px;
+    }
     @media @desktop {
       margin-top: 40px - (30 - 18); //minus line-height
       font-size: 18px;
@@ -96,6 +120,8 @@
     // height: 320px;
     margin-top: 46px - 31px; //minus margin from features__description
     padding: 0;
+    vertical-align: bottom;
+
     &--desktop {
       @media @mobile {
         display: none;
@@ -111,19 +137,20 @@
   &__hours{
     display: block;
     position: absolute;
-    top: 25%;
-    left: 13%;
-    padding: 19px 41px;
+    top: 21%;
+    left: 8%;
+    padding: 44px 39px;
     // height: 100%;
     font-size: 104.6px;
-    line-height: 162.87px;
+    line-height: 1;
     font-weight: 700;
     color: @vinous;
     text-align: center;
     align-self: center;
-    border: 10px solid @vinous;
+    border: 11px solid @vinous;
     border-radius: 50%;
   }
+
   &__item {
     @media @tablet {
       justify-content: space-around;
@@ -163,6 +190,8 @@
       display: none;
     }
     @media @tablet {
+      padding-top: 57px;
+      padding-bottom: 49px;
       background: @white;
     }
     @media @desktop {

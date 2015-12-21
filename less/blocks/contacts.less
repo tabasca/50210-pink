@@ -29,16 +29,24 @@
     @media @tablet {
       width: 300px;
     }
+    @media @desktop {
+      margin-bottom: 20px;
+
+    }
   }
   &__text {
     margin: 0;
-    margin-bottom: 30px - 6 - 6; //minus line-height
+    // margin-bottom: 30px - 6 - 6; //minus line-height
     font-size: @font-size--h1;
     font-weight: 300;
     line-height: 29 / 24;
     color: @vinous;
     @media @tablet {
       width: 300px;
+    }
+    @media @desktop {
+      padding-left: 5px;
+      padding-right: 5px;
     }
     &--link {
       &:hover {
@@ -58,6 +66,10 @@
     justify-content: center;
   }
   &__flex {
+    margin-bottom: 28px - 5 - 6; //line-height
+    @media @tablet {
+      margin-bottom: 53px - 5 - 6;
+    }
     &--center {
       @media @desktop {
         order: -1;

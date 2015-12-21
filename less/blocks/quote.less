@@ -6,6 +6,27 @@
     display: flex;
     flex-direction: column-reverse;
   }
+  @media @desktop {
+    margin-top: 75px;
+    padding-top: 120px - 11; //minus line-height
+    padding-left: 126px;
+    padding-right: 126px;
+  }
+  &__img {
+    @media @mobile {
+      display: none;
+    }
+    @media @tablet {
+      display: none;
+    }
+    @media @desktop {
+      display: block;
+      fill: @light-gray;
+      position: absolute;
+      top: 0;
+      left: 47%;
+    }
+  }
   &__title {
     margin-bottom: 40px;
     font-size: @font-size--h3;
@@ -26,9 +47,13 @@
   }
   &__text {
     line-height: 30 / 14;
+    margin: 0;
     @media @tablet {
       font-size: @font-size--h3;
       line-height: 30 / 18;
+    }
+    @media @desktop {
+      padding-bottom: 46px - 11 - 11; //minus line-height
     }
   }
   &__sign {

@@ -8,6 +8,8 @@
     position: static;
     border: none;
     background: none;
+    display: flex;
+    align-items: center;
   }
 
 
@@ -20,9 +22,17 @@
       width: 550px;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-end;
     }
 
+  }
+  &__item {
+    @media @desktop {
+      padding-left: 70px;
+      font-size: 18px;
+      line-height: 1;
+
+    }
   }
   &__item > .link {
     display: block;
@@ -40,6 +50,11 @@
     text-transform: uppercase;
     @media @desktop {
       border: none;
+      text-transform: none;
+      font-weight: 300;
+
+
+
 
       background: none;
     }
