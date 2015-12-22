@@ -1,0 +1,20 @@
+.js-menu .main-nav {
+  display: none;
+  @media @desktop {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.js-menu--open .main-nav {
+  display: block;
+  border-top: 1px solid @black;
+}
+.js-menu--open.page-header {
+  background-color: @dark-blue;
+}
+.js-menu--open .burger {
+  display: none;
+}
+.js-menu--open .cross {
+  display: block;
+}

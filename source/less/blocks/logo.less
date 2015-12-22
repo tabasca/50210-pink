@@ -1,0 +1,40 @@
+.logo {
+  &__pic {
+    vertical-align: middle;
+    &--desktop {
+      @media @mobile {
+        display: none;
+      }
+      @media @tablet {
+        display: none;
+      }
+      @media @desktop {
+        display: block;
+      }
+    }
+    &--tablet {
+      &:hover {
+        fill: @vinous;
+      }
+      @media @mobile {
+        display: none;
+      }
+      @media @desktop {
+        display: none;
+      }
+    }
+    &--mobile {
+      @media @desktop {
+        display: none;
+      }
+      @media @tablet {
+        display: none;
+      }
+    }
+  }
+  &--tablet {
+    &:hover {
+      fill: @vinous;
+    }
+  }
+}

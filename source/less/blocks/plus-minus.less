@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+.plus-minus {
+  font-size: 0;
+  width: 100%;
+  &_duration {
+    @media @desktop {
+      width: 252px;
+    }
+  }
+  &__btn {
+    padding: 0;
+    color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    width: 59px;
+    height: 59px;
+    display: inline-block;
+    border: 0;
+    background: transparent;
+    outline: none;
+    @media @mobile {
+      width: 59px;
+      height: 59px;
+      border: 2px solid @light-gray;
+    }
+    @media @tablet {
+      width: 59px;
+      height: 59px;
+      border: 2px solid @light-gray;
+    }
+    @media @desktop {
+      width: 59px;
+      height: 59px;
+      border: 2px solid @light-gray;
+    }
+    &:hover {
+      border-color: @dark-blue;
+    }
+    &:hover .plus-minus__btn--minus::before {
+      background: @white;
+    }
+    &:active {
+      border-color: @dark-blue;
+      background: @dark-blue;
+    }
+    &--tablet {
+      @media @tablet {
+        border: 2px solid @light-gray;
+      }
+    }
+    &--minus {
+      position: relative;
+      &::before {
+        position: absolute;
+        display: inline-block;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 27px;
+        height: 3px;
+        content: '';
+        background: @dark-blue;
+      }
+    }
+    &--plus {
+      position: relative;
+      &::before {
+        position: absolute;
+        display: inline-block;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 27px;
+        height: 3px;
+        content: '';
+        background: @dark-blue;
+      }
+      &::after {
+        position: absolute;
+        display: inline-block;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 3px;
+        height: 27px;
+        content: '';
+        background: @dark-blue;
+      }
+    }
+  }
+  &__input {
+    height: 59px;
+    padding-left: 0;
+    border: 0;
+    border: 2px solid @light-gray;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    text-align: center;
+    width: calc(~"100% - 118px");
+    &--tablet {
+      @media @tablet {
+        border: none;
+      }
+    }
+  }
+  &--tablet {
+    @media @tablet {
+      width: 250px;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 24px;
+  padding-top: 24.5px - (30 - 18); //minus line-height
+  padding-bottom: 24.5px - (30 - 18); //minus line-height
+  font-size: @font-size--h3;
+  line-height: 30 / 18;
+  border: 2px solid @light-gray;
+  color: @dark-blue;
+  outline: none;
+  &:hover {
+    border-color: @black;
+  }
+  &:active {
+    border-color: @vinous;
+  }
+  &--checkbox {
+    display: none;
+    &:checked + .label:before {
+      text-align: center;
+      content: '\2713';
+      color: @vinous;
+    }
+  }
+  &--radio {
+    display: none;
+    &:checked + .label:before {
+      text-align: center;
+      content: '\25CF';
+      color: @vinous;
+    }
+  }
+  &--center {
+    padding-left: 0;
+    text-align: center;
+  }
+  &--bg_gray {
+    background: @gray;
+  }
+}
