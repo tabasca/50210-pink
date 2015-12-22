@@ -144,7 +144,7 @@ gulp.task('build', [
     'style:build',
     'fonts:build',
     'imagemin:build',
-	  'imagesvg:build',
+	  'imagesvg:build'
 ]);
 
 // Отслеживание изменений
