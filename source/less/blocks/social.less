@@ -1,0 +1,35 @@
+.social {
+  display: flex;
+  width: 180px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  @media @tablet {
+    width: 100% / 3;
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 51px;
+      height: 51px;
+      border: 3px solid @light-gray;
+      border-radius: 50%;
+      &:hover {
+        border-color: @dark-blue;
+      }
+      &:active {
+        border-color: @light-gray;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+.youtube {
+  fill: @vinous;
+}
+.twitter {
+  fill: @vinous;
+}
+.facebook {
+  fill: @vinous;
+}
