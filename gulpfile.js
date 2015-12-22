@@ -49,10 +49,6 @@ var path = {
     clean: './build'
 };
 
-var scriptList = [ //скрипты
-  'source/js/vendors/mustache.js'
-]
-
 // Переменная с настройками dev сервера
 var config = {
     server: {
@@ -149,7 +145,6 @@ gulp.task('build', [
     'fonts:build',
     'imagemin:build',
 	  'imagesvg:build',
-    'scripts'
 ]);
 
 // Отслеживание изменений
