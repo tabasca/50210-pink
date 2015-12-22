@@ -1,12 +1,5 @@
 "use strict";
 
-// var gulp = require("gulp");
-// var less = require("gulp-less");
-// var plumber = require("gulp-plumber");
-// var postcss = require("gulp-postcss");
-// var autoprefixer = require("autoprefixer");
-
-
 //////////////////////////////
 
 
@@ -24,6 +17,8 @@ var cssmin = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var rimraf = require('gulp-dest-clean');
+var concat = require('gulp-concat');
+var rename = require("gulp-rename");
 var browserSync = require("browser-sync");
 var reload = browserSync.reload;
 
@@ -37,7 +32,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'source/*.html', // все файлы с расширением .html
-        js: 'source/js/*.js',
+        js: ['source/js/*.js', 'source/js/vendors/*.js'],
         style: 'source/less/style.less',
         img: 'source/img/**/*.{jpg,jpeg,png,gif}',
 		    imgsvg: 'source/img/**/*.svg',
@@ -53,6 +48,10 @@ var path = {
     },
     clean: './build'
 };
+
+var scriptList = [ //скрипты
+  'source/js/vendors/mustache.js'
+]
 
 // Переменная с настройками dev сервера
 var config = {
@@ -78,7 +77,7 @@ gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наши js
         .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        //.pipe(uglify()) //Сожмем наш js
+        .pipe(uglify()) //Сожмем наш js
         .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
@@ -149,7 +148,8 @@ gulp.task('build', [
     'style:build',
     'fonts:build',
     'imagemin:build',
-	  'imagesvg:build'
+	  'imagesvg:build',
+    'scripts'
 ]);
 
 // Отслеживание изменений
@@ -174,25 +174,6 @@ gulp.task('watch', function(){
     });
 });
 
-//////////////////////////////
-
-// gulp.task("style", function() {
-//   return gulp.src("less/style.less")
-//     .pipe(plumber())
-//     .pipe(less())
-//     .pipe(postcss([
-//       autoprefixer({browsers: "last 2 versions"})
-//     ]))
-//     .pipe(gulp.dest("css"));
-// });
-//
-// gulp.task("start", ["style"], function() {
-//   gulp.watch("less/**/*.less", ["style"]);
-// });
-//
-// gulp.task('hello', function() {
-//   console.log('Hello Zell');
-// });
 
 
 // Оставьте эту строку в самом конце файла
