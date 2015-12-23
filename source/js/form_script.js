@@ -109,6 +109,7 @@
      } else {
        input.value = value - 1;
      }
+
    }
  }
 })();

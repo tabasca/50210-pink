@@ -8,7 +8,26 @@
     align-self: center;
     text-align: right;
   }
+  &__decor--hidden {
+    @media @mobile {
+      display: none;
+    }
+    @media @tablet {
+      display: none;
+    }
+    @media @desktop {
+      display: inline-block;
+    }
+  }
   &__decor--pink {
     color: @vinous;
+  }
+  &--form_bottom {
+    @media @tablet {
+      width: 220px;
+    }
+    @media @desktop {
+      width: 380px;
+    }
   }
 }
