@@ -32,7 +32,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'source/*.html', // все файлы с расширением .html
-        js: ['source/js/vendors/*.js', 'node_modules/flickity/dist/*js', 'source/js/*.js'],
+        js: ['source/js/vendors/*.js', 'node_modules/flickity/dist/*.pkgd.js', 'source/js/*.js'],
         style: ['source/less/style.less', 'node_modules/flickity/dist/*css'],
         img: 'source/img/**/*.{jpg,jpeg,png,gif}',
 		    imgsvg: 'source/img/**/*.svg',
@@ -88,10 +88,10 @@ gulp.task('style:build', function () {
         .pipe(less()) //Скомпилируем
         .pipe(autoprefixer()) //Добавим вендорные префиксы
 		    .pipe(combineMq()) //Медиа-выражения
-        // .pipe(cssmin()) //Сожмем
+        .pipe(cssmin()) //Сожмем
         // .pipe(sourcemaps.write())
         .pipe(concat('style.css'))
-        // .pipe(rename({suffix: '.min'}))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
