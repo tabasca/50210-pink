@@ -73,9 +73,10 @@ gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наши js
         .pipe(rigger()) //Прогоним через rigger
         // .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(uglify()) //Сожмем наш js
         // .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(concat('main.js'))
+        .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
+        .pipe(uglify()) //Сожмем наш js
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
@@ -88,9 +89,10 @@ gulp.task('style:build', function () {
         .pipe(less()) //Скомпилируем
         .pipe(autoprefixer()) //Добавим вендорные префиксы
 		    .pipe(combineMq()) //Медиа-выражения
-        .pipe(cssmin()) //Сожмем
         // .pipe(sourcemaps.write())
         .pipe(concat('style.css'))
+        .pipe(gulp.dest(path.build.css))
+        .pipe(cssmin()) //Сожмем
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
