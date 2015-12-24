@@ -10,6 +10,5 @@ if (window.innerWidth < 660){
 			cellSelector: '.price',
 			initialIndex: 2
 	});
+	flkty.remove(elemHidden);
 }
-
-flkty.remove(elemHidden);

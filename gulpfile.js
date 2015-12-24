@@ -32,7 +32,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'source/*.html', // все файлы с расширением .html
-        js: ['source/js/*.js', 'source/js/vendors/*.js', 'node_modules/flickity/dist/*js'],
+        js: ['source/js/vendors/*.js', 'node_modules/flickity/dist/*js', 'source/js/*.js'],
         style: ['source/less/style.less', 'node_modules/flickity/dist/*css'],
         img: 'source/img/**/*.{jpg,jpeg,png,gif}',
 		    imgsvg: 'source/img/**/*.svg',
@@ -72,9 +72,11 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наши js
         .pipe(rigger()) //Прогоним через rigger
-        .pipe(sourcemaps.init()) //Инициализируем sourcemap
+        // .pipe(sourcemaps.init()) //Инициализируем sourcemap
         .pipe(uglify()) //Сожмем наш js
-        .pipe(sourcemaps.write()) //Пропишем карты
+        // .pipe(sourcemaps.write()) //Пропишем карты
+        .pipe(concat('main.js'))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });
@@ -82,12 +84,14 @@ gulp.task('js:build', function () {
 // Сборка стилей
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем style.less
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(less()) //Скомпилируем
         .pipe(autoprefixer()) //Добавим вендорные префиксы
 		    .pipe(combineMq()) //Медиа-выражения
-        .pipe(cssmin()) //Сожмем
-        .pipe(sourcemaps.write())
+        // .pipe(cssmin()) //Сожмем
+        // .pipe(sourcemaps.write())
+        .pipe(concat('style.css'))
+        // .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
