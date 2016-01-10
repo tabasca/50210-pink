@@ -1,0 +1,234 @@
+.intro {
+  position: relative;
+  &__box {
+    background: transparent;
+    @media @desktop {
+      padding-bottom: 0;
+    }
+    &--index {
+      @media @mobile {
+        background: url(../img/iphone-hand-mobile.png) no-repeat 0 39%, @dark-blue url(../img/background-mobile@1x.jpg) no-repeat top center;
+        background-size: 257px 285px, auto;
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background: url(../img/iphone-hand-mobile@2x.png) no-repeat 0 35%, @dark-blue url(../img/background-mobile@2x.jpg) no-repeat top center;
+          background-size: 257px 285px, cover;
+        }
+        @media (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background: url(../img/iphone-hand-mobile@3x.png) no-repeat 0 39%, @dark-blue url(../img/background-mobile@3x.jpg) no-repeat top center;
+          background-size: 257px 285px, cover;
+        }
+      }
+      @media @tablet {
+        background: url(../img/iphone-hand-tablet@1x.png) no-repeat 100% 100%, @dark-blue url(../img/background-tablet@1x.jpg) no-repeat 50% 50%;
+        background-size: contain, cover;
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background: url(../img/iphone-hand-tablet@2x.png) no-repeat 50% 100%, @dark-blue url(../img/background-tablet@2x.jpg) no-repeat center center;
+          background-size: contain, cover;
+        }
+      }
+      @media @desktop {
+        background: url(../img/iphone-hand-desktop@1x.png) no-repeat 100% 100%, @dark-blue url(../img/background-fullsize.jpg) no-repeat center center;
+        background-size: auto, cover;
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background: url(../img/iphone-hand-desktop@2x.png) no-repeat bottom center, @dark-blue url(../img/background-fullsize.jpg) no-repeat center center;
+          background-size: contain, cover;
+        }
+      }
+    }
+    &--inner {
+      @media @mobile {
+        background: @dark-blue url(../img/background-mobile@1x.jpg) no-repeat center center;
+        background-size: cover;
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background: @dark-blue url(../img/background-mobile@2x.jpg) no-repeat center center;
+          background-size: cover;
+        }
+        @media (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background: @dark-blue url(../img/background-mobile@3x.jpg) no-repeat center center;
+          background-size: cover;
+        }
+      }
+      @media @tablet {
+        background: @dark-blue url(../img/background-tablet@1x.jpg) no-repeat center center;
+        background-size: cover;
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+          background: @dark-blue url(../img/background-tablet@2x.jpg) no-repeat center center;
+          background-size: cover;
+        }
+      }
+      @media @desktop {
+        background: @dark-blue url(../img/background-fullsize.jpg) no-repeat top center;
+        background-size: cover;
+      }
+    }
+  }
+  &__content {
+    background: @dark-blue;
+    @media @tablet {
+      background: transparent;
+    }
+  }
+  &__description {
+    margin-top: 0;
+    padding-top: 57px - 16; //minus line-height
+    font-size: @font-size;
+    line-height: 30 / 14;
+    background: @white;
+    @media @tablet {
+      margin-bottom: 0;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 100px - (30 - 18); //minus line-height
+      font-size: 18px;
+      line-height: 30 / 18;
+    }
+    &--hidden {
+      @media @mobile {
+        display: none;
+      }
+      @media @tablet {
+        padding: 0;
+        margin: 0;
+      }
+      @media @desktop {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  &__title {
+    margin: 0;
+    padding-top: 91px - (28 - 24); //minus line-height
+    padding-bottom: 318px - 4; //minus line-height and plus margin form btn
+    font-size: @font-size--h1;
+    font-weight: 300;
+    line-height: 28 / 24;
+    color: @white;
+    background: transparent;
+    .clearfix();
+    @media @mobile {
+      padding-left: 30 / 320 * 100%;
+      padding-right: 30 / 320 * 100%;
+    }
+    @media @tablet {
+      padding-top: 212px - 8; //minus line-height
+      padding-bottom: 40px - (48 - 40); //minus line-height
+      padding-left: 45px;
+      padding-right: 45px;
+      font-size: 40px;
+      line-height: 48 / 40;
+    }
+    @media @desktop {
+      padding-top: 229px - (60 - 50); //minus line-height
+      padding-bottom: 63px - (60 - 50); //minus line-height
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 50px;
+      line-height: 60 / 50;
+    }
+    &--inner {
+      padding-bottom: 59px - 4; //minus line-height
+      @media @tablet {
+        padding-bottom: 80px;
+        font-size: 50px;
+        line-height: 60 / 50;
+      }
+      @media @desktop {
+        line-height: 1;
+        padding-top: 184px;
+        padding-bottom: 110px;
+      }
+    }
+    &--gray {
+      padding-top: 44px - 2px; //minus line-height
+      padding-bottom: 0;
+      color: @dark-blue;
+      background: @white;
+      @media @tablet {
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        &:first-child {
+          padding-top: 58px - (48 - 40);
+        }
+      }
+      @media @desktop {
+        padding-bottom: 0;
+      }
+    }
+    &--paddings {
+      @media @tablet {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @media @desktop {
+        padding-top: 0;
+        padding-left: 240px;
+        padding-right: 240px;
+      }
+    }
+  }
+  &__text {
+    margin: 0;
+    padding-top: 29px - 10; //minus line-height
+    padding-bottom: 37px - 10; //minus line-height
+    line-height: 24 / 14;
+    color: @white;
+    .clearfix();
+    @media @tablet {
+      font-size: 18px;
+      line-height: 24 / 18;
+      font-weight: 200;
+      padding: 0;
+      margin: 0;
+      margin-top: 42px - (24 - 18); //minus line-height
+      padding-bottom: 115px - (24 - 18); //minus line-height
+    }
+    @media @desktop {
+      font-weight: 300;
+      padding-bottom: 127px - (24 - 18); //minus line-height
+    }
+  }
+  &__btn {
+    margin-top: 28px;
+    border-radius: 30px;
+    @media @tablet {
+      padding-left: 38 / 275 * 100%;
+      padding-right: 38 / 275 * 100%;
+      margin: 0;
+    }
+    @media @desktop {
+      padding-left: 28px;
+      padding-right: 28px;
+      font-size: 21px;
+      line-height: 18 / 21;
+    }
+    &:hover {
+      color: @vinous;
+      background: @white;
+    }
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
+  }
+  &--sub {
+    margin-bottom: 32px - 2; //minus line-height
+    background: @white;
+    @media @tablet {
+      padding-right: 0;
+    }
+  }
+  &--inner {
+    @media @tablet {
+      padding-right: 0;
+    }
+  }
+}

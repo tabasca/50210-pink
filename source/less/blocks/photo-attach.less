@@ -1,0 +1,50 @@
+.photo-attach {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-size: @font-size--h3;
+  height: 63px;
+  line-height: 63px;
+  margin-bottom: 41px;
+  .clearfix();
+  &__btn {
+    float: right;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px - 12 0; //minus line-height
+    line-height: 30 / 18;
+    width: 100%;
+    height: 100%;
+    background: @white;
+    color: @dark-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid @light-gray;
+  }
+}
+.photo-attach .btn,
+.photo-attach > mark {
+  display: block;
+  cursor: pointer;
+}
+.photo-attach:hover .btn {
+  border-color: @dark-blue;
+}
+.photo-attach:active .btn {
+  color: @white;
+  border-color: @dark-blue;
+  background: @dark-blue;
+}
+.photo-attach > mark {
+  background: transparent;
+}
+.photo-attach .input[type=file] {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 63px;
+  cursor: pointer;
+}

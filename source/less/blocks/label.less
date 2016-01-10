@@ -1,0 +1,33 @@
+.label {
+  padding-left: 24px;
+  padding-top: 28px - (30 - 14); //minus line-height
+  color: @vinous;
+  line-height: 30 / 14;
+  text-transform: uppercase;
+  text-align: left;
+  @media @mobile {
+    // float: left;
+  }
+  &[for='duration'] {
+    @media @tablet {
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &--center {
+    padding-left: 0;
+    padding-top: 18px - (30 - 14); //minus line-height
+    padding-bottom: 27px - (30 - 14);
+    text-align: center;
+    @media @mobile {
+      display: flex;
+      justify-content: center;
+    }
+    @media @tablet {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 24px;
+    }
+  }
+}

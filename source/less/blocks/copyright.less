@@ -1,0 +1,29 @@
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  @media @tablet {
+    width: 100% / 3;
+    &__text {
+      font-size: 14px;
+      line-height: 18 / 14;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover .htmlacademy {
+      fill: @black;
+    }
+    &:active .htmlacademy {
+      fill: @black;
+      opacity: 0.3;
+    }
+  }
+}
+.htmlacademy {
+  margin-left: 15px;
+  fill: @vinous;
+}

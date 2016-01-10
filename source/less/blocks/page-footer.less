@@ -1,0 +1,43 @@
+.page-footer {
+  padding: 25px 0;
+  .clearfix();
+  @media @tablet {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media @tablet {
+      width: 100% / 3;
+    }
+    &--tablet {
+      @media @desktop {
+        display: none;
+      }
+    }
+    &--desktop {
+      @media @tablet {
+        display: none;
+      }
+      @media @desktop {
+        display: block;
+      }
+    }
+    &-link {
+      &:hover .page-footer__logo--hover {
+        fill: @vinous;
+      }
+      &:active .page-footer__logo--hover {
+        fill: @black;
+        opacity: 0.3;
+      }
+    }
+  }
+  &--hidden {
+    @media @mobile {
+      display: none;
+    }
+  }
+}
